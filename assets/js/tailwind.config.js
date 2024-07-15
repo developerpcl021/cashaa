@@ -5,13 +5,20 @@ tailwind.config = {
         header: "#1a1f2f",
         global: "#14192a",
         clickable: "#3F6FF9",
+        highlighter: "#3F6FF9",
       },
       fontFamily: {
         dmsans: "DM Sans",
       },
       fontSize: {
-        'main-head': "55px"
-      }
+        unstable: "22px",
+        rare: "25px",
+        "inform-head": "40px",
+        "main-head": "55px",
+      },
+      backgroundSize: {
+        fully: "100% 100%",
+      },
     },
   },
 };

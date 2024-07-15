@@ -12,11 +12,12 @@
 
 </head>
 
-<body class="overflow-x-hidden">
-    <div class="bg-global">
+<body>
+    <div class="bg-global hidden">
         <header class="fixed top-0 left-0 right-0 z-[999999] bg-header">
-            <nav class="flex items-center justify-between px-4 mx-auto max-w-[1440px] py-9" aria-label="Global">
-                <div class="flex lg:flex-1">
+            <nav class="flex items-center justify-between px-4 mx-auto max-w-[1440px] relative z-50 py-9"
+                aria-label="Global">
+                <div class="flex">
                     <a href="/">
                         <span class="sr-only">Your Company</span>
                         <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
@@ -34,10 +35,10 @@
                         </svg>
                     </button>
                 </div>
-                <div class="hidden lg:flex lg:flex-1 gap-8 lg:justify-end">
+                <div class="hidden lg:flex gap-8 lg:justify-end">
                     <a href="#"
-                        class="bg-clickable px-10 py-4 text-sm font-semibold text-white hover:bg-transparent duration-200 border border-clickable">Start
-                        Earning Today</a>
+                        class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable">Get
+                        Started</a>
                     <a href="#" class="text-sm font-semibold leading-6 text-white">
                         <img src="assets/image/svg/Playstore.svg" alt="Playstore" class="w-full h-full max-w-[46px]"
                             width="100" height="100" loading="lazy">
@@ -89,38 +90,592 @@
         </header>
 
         <div class="relative">
-            <div class="items-center h-screen px-4 mx-auto max-w-[1440px] lg:flex lg:py-48 relative z-50">
-                <div class="flex-shrink-0 lg:mx-0 lg:pt-8">
-                    <h1 class="mt-10 text-4xl font-normal tracking-tight text-white sm:text-[95px] leading-normal">Earn
-                        up
-                        to <br><span class="font-bold">34% on crypto</span></h1>
-                    <p class="mt-6 text-lg leading-8 text-white">Safe and secure way to generate yield on your digital
-                        assets.</p>
-                    <div class="grid grid-cols-2 gap-3 mt-6">
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
-                                class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                            <p class="text-white">Daily interest payouts</p>
+            <div class="min-h-screen px-4 mx-auto max-w-[1440px] relative z-50 lg:py-48 relative z-50 flex">
+                <div class="grid grid-cols-2 items-center gap-10 grow">
+                    <div class="flex-shrink-0 lg:mx-0 lg:pt-8 space-y-8">
+                        <h1
+                            class="font-sans text-4xl font-normal tracking-tight text-white sm:text-[95px] leading-none relative">
+                            Earn
+                            up
+                            to <br><span class="font-bold">34% on crypto</span>
+                            <!-- bottom curve line -->
+                            <span class="absolute bottom-0 left-0 z-[-1] -translate-x-[10px] translate-y-[14px]">
+                                <img src="assets/image/svg/below-liner.svg" alt="below-liner"
+                                    class="w-full h-full max-w-[220px]" width="100" height="100" loading="lazy">
+                            </span>
+                        </h1>
+                        <p class="font-sans font-normal text-lg leading-8 text-white">Safe and secure way to generate
+                            yield on your
+                            digital
+                            assets.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
+                                    class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
+                                <p class="text-white">Daily interest payouts</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
+                                    class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
+                                <p class="text-white">Daily interest payouts</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
+                                    class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
+                                <p class="text-white">Daily interest payouts</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
+                                    class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
+                                <p class="text-white">Daily interest payouts</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
-                                class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                            <p class="text-white">Daily interest payouts</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
-                                class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                            <p class="text-white">Daily interest payouts</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
-                                class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                            <p class="text-white">Daily interest payouts</p>
+                        <div class="flex items-center pt-4 gap-x-6">
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable">Start
+                                Earning Today</a>
+                            <a href="#" class="text-sm font-semibold leading-6 text-white">
+                                <img src="assets/image/svg/Apple.svg" alt="Apple" class="w-full h-full max-w-[24px]"
+                                    width="100" height="100" loading="lazy">
+                            </a>
+                            <a href="#" class="text-sm font-semibold leading-6 text-white">
+                                <img src="assets/image/svg/Playstore.svg" alt="Playstore"
+                                    class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
+                            </a>
                         </div>
                     </div>
-                    <div class="flex items-center mt-10 gap-x-6">
+
+                    <!-- For right side image or any content -->
+                    <!-- <div>
+                        <img src="assets/image/png&jpg/dummy image.png" alt="dummy image on side of content"
+                            class="w-full h-full object-contain max-h-[570px]">
+                    </div> -->
+                </div>
+            </div>
+            <!-- right side background blob -->
+            <div class="absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
+                <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+            </div>
+            <!-- left side background blob -->
+            <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
+                <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+            </div>
+            <!-- bottom label image of cashaa -->
+            <div class="absolute z-0 bottom-0 left-0 right-0 translate-y-1/2">
+                <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa" class="object-contain w-full h-full"
+                    width="100" height="100" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- Awards winning company -->
+    <section class="bg-global hidden py-10 md:py-16 xl:py-36 xl:pb-0">
+        <div class="px-4 mx-auto max-w-[1440px] relative z-50">
+            <h2 class="font-sans font-light text-main-head text-white leading-none max-w-[40%] text-center mx-auto">
+                Awards winning
+                company</h2>
+
+            <!-- achieving awards -->
+            <div class="grid grid-cols-5 gap-y-4 mt-8">
+                <span>
+                    <img src="assets/image/png&jpg/Award 10.png" alt="achieving awards"
+                        class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
+                        loading="lazy">
+                </span>
+                <span>
+                    <img src="assets/image/png&jpg/Award 9.png" alt="achieving awards"
+                        class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
+                        loading="lazy">
+                </span>
+                <span>
+                    <img src="assets/image/png&jpg/Award 7.png" alt="achieving awards"
+                        class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
+                        loading="lazy">
+                </span>
+                <span>
+                    <img src="assets/image/png&jpg/Award 8.png" alt="achieving awards"
+                        class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
+                        loading="lazy">
+                </span>
+                <span>
+                    <img src="assets/image/png&jpg/Award 6.png" alt="achieving awards"
+                        class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
+                        loading="lazy">
+                </span>
+            </div>
+
+            <!-- overall company reports -->
+            <div class="grid grid-cols-4 gap-y-4 mt-16 w-[90%] mx-auto text-center">
+                <div class="space-y-4">
+                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                        4055
+                    </h2>
+                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                        Numbers of User</h3>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                        $5.11 M
+                    </h2>
+                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                        Deposited Amount</h3>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                        $10.22 M
+                    </h2>
+                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                        Colateral Value</h3>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                        200.11%
+                    </h2>
+                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                        LTV Ratio</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earn more and Beat Inflation -->
+    <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
+        <div class="px-4 mx-auto max-w-[1440px] relative z-50">
+            <div class="w-3/5 mx-auto">
+                <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+                    Earn more and Beat Inflation</h2>
+                <p class="font-sans font-normal text-lg leading-8 text-white px-8 text-center mt-6">Are you investing in
+                    crypto because you
+                    believe it is the currency of the future or to turn a profit? We help you HODL while earning
+                    inflation-beating interest.</p>
+
+                <div class="grid grid-cols-2 gap-5 mt-10">
+                    <div class="border-2 border-white/10 p-10 bg-[#1d2232] space-y-4">
+                        <img src="assets/image/svg/start-inversting.svg" alt="start-inversting"
+                            class="object-contain w-full h-full max-w-[52px] max-h-[60px]" width="100" height="100"
+                            loading="lazy">
+                        <h3 class="font-sans font-semibold text-xl text-white">Earn Fixed interest in any
+                            market
+                            condition</h3>
+                        <h4 class="font-sans font-normal text-lg text-white">Worried about rampant inflation eating into
+                            your savings? At Cashaa, we help you put your
+                            idle assets to work with a fixed source of passive income.</h4>
+                    </div>
+                    <div class="border-2 border-white/10 p-10 bg-[#1d2232] space-y-4 pr-20">
+                        <img src="assets/image/svg/start-earning.svg" alt="start-earning"
+                            class="object-contain w-full h-full max-w-[52px] max-h-[60px]" width="100" height="100"
+                            loading="lazy">
+                        <h3 class="font-sans font-semibold text-xl text-white">Why wait! Start earning right away</h3>
+                        <h4 class="font-sans font-normal text-lg text-white">
+                            Just top-up your Cashaa account and start earning up to 20% annual interest.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right side background blob -->
+        <div class="absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
+            <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+        <!-- left side background blob -->
+        <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
+            <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+    </section>
+
+    <!-- marquee section (Current yield on assets) -->
+    <div class="bg-global hidden relative">
+        <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+            Current yield on assets</h2>
+
+        <div class="grid grid-flow-col auto-cols-max 2xl:auto-cols-auto gap-5 mt-10 overflow-x-auto"
+            style="scrollbar-width: none;">
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-1.png" alt="assets-1"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-2.png" alt="assets-2"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-3.png" alt="assets-3"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-4.png" alt="assets-4"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-5.png" alt="assets-5"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-6.png" alt="assets-6"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-7.png" alt="assets-7"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-1.png" alt="assets-8"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
+                <img src="assets/image/png&jpg/assets-2.png" alt="assets-9"
+                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                <div>
+                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
+                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                </div>
+            </div>
+        </div>
+        <!-- bottom label image of cashaa -->
+        <div class="mt-16">
+            <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa" class="object-contain w-full h-full"
+                width="100" height="100" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Earn Calculator -->
+    <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
+        <div class="px-4 mx-auto max-w-[1440px] relative z-50">
+            <div class="w-3/5 mx-auto">
+                <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+                    Earn Calculator</h2>
+                <p class="font-sans font-normal text-lg leading-8 text-white px-8 text-center mt-6">Select a Token,
+                    Amount, Loyalty Tier and Term to calculate your yields</p>
+            </div>
+        </div>
+        <!-- right side background blob -->
+        <div class="absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
+            <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+        <!-- left side background blob -->
+        <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
+            <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+    </section>
+    <!-- Why Earn with Cashaa? -->
+    <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
+        <div class="px-4 mx-auto max-w-[1440px] relative z-50">
+            <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+                Why Earn with Cashaa?</h2>
+            <p class="font-sans font-normal text-lg leading-8 text-white px-8 text-center mt-6">Safe, secure and
+                fixed passive income to put your idle assets to work</p>
+
+            <div class="space-y-6">
+                <div class="grid grid-cols-2 items-center mt-10">
+                    <div class="w-3/5 pr-10 space-y-6">
+                        <h3 class="font-sans font-normal text-inform-head text-white leading-none">Enjoy daily
+                            passive
+                            income</h3>
+                        <h4 class="font-sans font-normal text-lg leading-8 text-white">You earn daily interest with
+                            Cashaa
+                            giving you the power of compounding</h4>
+                        <div>
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                Earning Today</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="assets/image/png&jpg/blogs-content-images.png" alt="blogs-content-images"
+                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 items-center mt-10">
+                    <div class="w-3/5 pr-10 space-y-6">
+                        <h3 class="font-sans font-normal text-inform-head text-white leading-none">Fixed interest rates
+                        </h3>
+                        <h4 class="font-sans font-normal text-lg leading-8 text-white">You earn daily interest with
+                            Cashaa
+                            giving you the power of compounding</h4>
+                        <div>
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                Earning Today</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="assets/image/png&jpg/blogs-content-images.png" alt="blogs-content-images"
+                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 items-center mt-10">
+                    <div class="w-3/5 pr-10 space-y-6">
+                        <h3 class="font-sans font-normal text-inform-head text-white leading-none">Earn more with CAS
+                        </h3>
+                        <h4 class="font-sans font-normal text-lg leading-8 text-white">You earn daily interest with
+                            Cashaa
+                            giving you the power of compounding</h4>
+                        <div>
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                Earning Today</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="assets/image/png&jpg/blogs-content-images.png" alt="blogs-content-images"
+                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right side background blob -->
+        <div class="absolute z-30 top-1/2 right-0 translate-x-[65%] -translate-y-1/2">
+            <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+        <!-- left side background blob -->
+        <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-[25%]">
+            <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+    </section>
+    <!-- You are 3 steps away from earning with Cashaa -->
+    <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
+        <div class="px-4 mx-auto max-w-[1440px] relative z-50">
+            <h2 class="font-sans font-light text-main-head text-white leading-none text-center xl:w-1/2 mx-auto hidden">
+                You are 3 steps away from earning with Cashaa</h2>
+
+            <!-- steps cards -->
+            <div class="grid grid-cols-3 gap-12 mt-12 relative hidden">
+                <div
+                    class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8 relative">
+                    <div>
+                        <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
+                            class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
+                            loading="lazy">
+                    </div>
+                    <h3 class="font-sans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">Sign up
+                        for a Cashaa
+                        account</h3>
+                </div>
+                <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
+                    <div>
+                        <img src="assets/image/png&jpg/steps-cashaa-3.png" alt="steps-cashaa-3"
+                            class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
+                            loading="lazy">
+                    </div>
+                    <h3 class="font-sans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                        Purchase or transfer
+                        crypto to your account</h3>
+                </div>
+                <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
+                    <div>
+                        <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
+                            class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
+                            loading="lazy">
+                    </div>
+                    <h3 class="font-sans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">Opt in
+                        for flexible
+                        income or start a fixed term deposit</h3>
+                </div>
+
+                <div class="absolute bottom-[-4px] left-0 right-[-4px]">
+                    <img src="assets/image/png&jpg/bottom-gr-card.png" alt="bottom-gr-card"
+                        class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                </div>
+            </div>
+            <div class="text-center mt-5 hidden">
+                <a href="#"
+                    class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                    earning</a>
+            </div>
+
+            <div class="mt-28">
+                <!-- Hey, this isn’t the end! See what’s next! -->
+                <h2 class="font-sans font-light text-main-head text-white leading-none text-center xl:w-2/5 mx-auto">
+                    Hey, this isn’t the end! See what’s next!</h2>
+                <div class="grid grid-cols-4 mt-10">
+                    <div
+                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                        <p class="font-sans font-normal text-unstable text-white">I am curious to
+                            know how Cashaa provides such great returns!</p>
+
+                        <div class="flex items-center gap-3">
+                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                loading="lazy">
+                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
+                                Place mouse here</p>
+                        </div>
+
+                        <div
+                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                            <h4 class="font-sans font-normal text-rare text-white">Self-sustainable business model
+                            </h4>
+                            <p class="font-sans font-normal text-lg text-white">
+                                Cashaa generates predictable and safe yields through a risk-free and simple model of
+                                secured and sufficiently hedged institutional lending. No uncertainty of yield farming,
+                                token burning/minting, etc.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                        <p class="font-sans font-normal text-unstable text-white">How do I earn the highest possible
+                            interest on Cashaa?</p>
+
+                        <div class="flex items-center gap-3">
+                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                loading="lazy">
+                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
+                                Place mouse here</p>
+                        </div>
+
+                        <div
+                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-8">
+                            <div class="space-y-3">
+                                <h4 class="font-sans font-normal text-rare text-white">Become a Diamond Member
+                                </h4>
+                                <p class="font-sans font-normal text-lg text-white">
+                                    Become a Diamond by making sure you have 10% or more of your total portfolio value
+                                    in
+                                    CAS token at all times.
+                                </p>
+                            </div>
+                            <!-- if double information -->
+                            <div class="space-y-3">
+                                <h4 class="font-sans font-normal text-rare text-white">Opt to earn interest in CAS
+                                </h4>
+                                <p class="font-sans font-normal text-lg text-white">
+                                    Earn up to 3% bonus on your yields by opting to take your interest  and payout in
+                                    CAS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                        <p class="font-sans font-normal text-unstable text-white">How do I start earning interest on my
+                            available balance?</p>
+
+                        <div class="flex items-center gap-3">
+                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                loading="lazy">
+                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
+                                Place mouse here</p>
+                        </div>
+
+                        <div
+                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                            <h4 class="font-sans font-normal text-rare text-white">Opt-in for earning flex interest
+                            </h4>
+                            <p class="font-sans font-normal text-lg text-white">
+                                Once you have topped up your Cashaa account, do make sure to opt-in for earning flex
+                                interest on your available balance to start earning interest.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                        <p class="font-sans font-normal text-unstable text-white">Everything looks great! How do I get
+                            started?</p>
+
+                        <div class="flex items-center gap-3">
+                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                loading="lazy">
+                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
+                                Place mouse here</p>
+                        </div>
+
+                        <div
+                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                            <h4 class="font-sans font-normal text-rare text-white">Great!
+                            </h4>
+                            <p class="font-sans font-normal text-lg text-white">
+                                You can start earning interest by clicking on the button below.
+                            </p>
+
+                            <div class="absolute bottom-0 left-0 right-0">
+                                <a href="#Start earning"
+                                    class="bg-global px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border-2 border-global inline-block w-full text-center">Start
+                                    earning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- right side background blob -->
+        <div class="absolute z-30 top-1/2 right-0 translate-x-[65%] -translate-y-1/2">
+            <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+        <!-- left side background blob -->
+        <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-[25%]">
+            <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer aria-label="Website Footer">
+        <div class="bg-global relative">
+            <div class="relative z-50">
+                <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa" class="object-contain w-full h-full"
+                    width="100" height="100" loading="lazy">
+            </div>
+            <div class="px-4 mx-auto max-w-[1440px] relative z-50 py-12">
+                <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+                    To join the Cashaa revolution <br> leave your email address below</h2>
+                <p class="font-sans font-normal text-lg leading-8 text-white xl:w-1/2 mx-auto text-center mt-8">All
+                    or part of the services, some features
+                    thereof, or some Digital Assets, are not available in certain jurisdictions, including where
+                    restrictions or limitations may apply, as indicated in the relevant general terms and
+                    conditions.
+                </p>
+                <div class="w-3/4 mx-auto">
+                    <div class="flex items-center pt-4 gap-x-6 hidden">
                         <a href="#"
-                            class="bg-clickable px-10 py-4 text-sm font-semibold text-white hover:bg-transparent duration-200 border border-clickable">Start
+                            class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable">Start
                             Earning Today</a>
                         <a href="#" class="text-sm font-semibold leading-6 text-white">
                             <img src="assets/image/svg/Apple.svg" alt="Apple" class="w-full h-full max-w-[24px]"
@@ -131,34 +686,75 @@
                                 width="100" height="100" loading="lazy">
                         </a>
                     </div>
+
+                    <div class="w-fit mx-auto mt-16">
+                        <a href="/">
+                            <span class="sr-only">Your Company</span>
+                            <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
+                                class="w-full h-full object-contain max-w-[172px]" width="100" height="100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <hr class="my-10">
+
+                    <div class="flex items-center gap-2.5 mx-auto w-fit">
+                        <div
+                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
+                            <img src="assets/image/png&jpg/social-linkedin.png" alt="social-linkedin"
+                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                        </div>
+                        <div
+                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
+                            <img src="assets/image/png&jpg/social-facebook.png" alt="social-facebook.png"
+                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                        </div>
+                        <div
+                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
+                            <img src="assets/image/png&jpg/social-xx.png" alt="social-xx.png"
+                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                        </div>
+                        <div
+                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
+                            <img src="assets/image/png&jpg/social-insta.png" alt="social-insta.png"
+                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                        </div>
+                        <div
+                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
+                            <img src="assets/image/png&jpg/social-telegram.png" alt="social-telegram.png"
+                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5 mx-auto w-fit my-6">
+                        <span class="border-r-2 last:border-r-0 pr-5">
+                            <a href="#" class="font-sans font-normal text-lg leading-none text-white border-b">
+                                AML
+                            </a>
+                        </span>
+                        <span class="border-r-2 last:border-r-0 pr-5">
+                            <a href="#" class="font-sans font-normal text-lg leading-none text-white border-b">
+                                Terms and Conditions
+                            </a>
+                        </span>
+                        <span class="border-r-2 last:border-r-0 pr-5">
+                            <a href="#" class="font-sans font-normal text-lg leading-none text-white border-b">
+                                Privacy Policy
+                            </a>
+                        </span>
+                    </div>
+                    <p class="font-sans font-normal text-sm leading-none text-white text-center">Copyright 2016- 2024
+                        Cashaa. All
+                        rights reserved.</p>
                 </div>
             </div>
-            <!-- right side background blob -->
-            <div class="absolute z-20 top-0 right-0 translate-x-1/2 -translate-y-1/2">
-                <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
-                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-            </div>
-            <!-- left side background blob -->
-            <div class="absolute z-20 bottom-0 left-0 -translate-x-[70%] translate-y-1/2">
-                <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
-                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-            </div>
+
             <!-- bottom label image of cashaa -->
-            <div class="absolute z-20 bottom-0 left-0 right-0 translate-y-1/2">
-                <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa" class="object-contain w-full h-full"
-                    width="100" height="100" loading="lazy">
+            <div class="absolute z-0 top-0 left-0 -translate-y-2/3">
+                <img src="assets/image/png&jpg/bottom-left-blov.png" alt="label-cashaa"
+                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
             </div>
         </div>
-    </div>
-
-    <!-- Awards winning company -->
-    <section class="bg-global py-44">
-        <div class="px-4 mx-auto max-w-[1440px]">
-            <h2 class="font-sans font-normal text-main-head text-white max-w-[40%] text-center mx-auto">Awards winning
-                company</h2>
-        </div>
-    </section>
-
+    </footer>
     <script src="assets/js/main.js"></script>
 </body>
 
