@@ -9,102 +9,66 @@
     <script src="assets/js/tailwind.config.js"></script>
     <!-- custom css -->
     <link rel="stylesheet" href="assets/style/main.css">
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
 <body>
-    <div class="bg-global">
+    <div class="bg-global hid den">
         <header class="fixed top-0 left-0 right-0 z-[999999] bg-header">
-            <nav class="flex items-center justify-between px-4 mx-auto max-w-[1440px] relative z-50 py-9"
+            <nav class="flex items-center justify-between px-4 mx-auto max-w-[1440px] relative z-50 py-6 md:py-9"
                 aria-label="Global">
                 <div class="flex">
                     <a href="/">
                         <span class="sr-only">Your Company</span>
                         <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
-                            class="w-full h-full object-contain max-w-[172px]" width="100" height="100" loading="lazy">
+                            class="w-full h-full object-contain max-w-[104px] md:max-w-[172px]" width="100" height="100"
+                            loading="lazy">
                     </a>
                 </div>
-                <div class="flex lg:hidden">
-                    <button type="button"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden lg:flex gap-8 lg:justify-end">
+                <div class="flex items-center gap-4 md:gap-8 lg:justify-end">
+                    <a href="#Home"
+                        class="xl:hidden font-dmsans font-bold text-md text-white duration-200 border-b-4 border-clickable">Home</a>
                     <a href="#"
-                        class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable">Get
+                        class="bg-clickable px-3 md:px-10 py-2.5 md:py-4 font-dmsans font-bold text-sm md:text-lg text-white hover:bg-transparent duration-200 border border-clickable">Get
                         Started</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <a href="#" class="hidden lg:block text-sm font-semibold leading-6 text-white">
                         <img src="assets/image/svg/Playstore.svg" alt="Playstore" class="w-full h-full max-w-[46px]"
                             width="100" height="100" loading="lazy">
                     </a>
                 </div>
             </nav>
-            <!-- Mobile menu, show/hide based on menu open state. -->
-            <div class="lg:hidden hidden" role="dialog" aria-modal="true">
-                <!-- Background backdrop, show/hide based on slide-over state. -->
-                <div class="fixed inset-0 z-50"></div>
-                <div
-                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div class="flex items-center justify-between">
-                        <a href="/">
-                            <span class="sr-only">Your Company</span>
-                            <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
-                                class="w-full h-full object-contain max-w-[172px]" width="100" height="100"
-                                loading="lazy">
-                        </a>
-                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
-                            <span class="sr-only">Close menu</span>
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="mt-6 flow-root">
-                        <div class="-my-6 divide-y divide-gray-500/10">
-                            <div class="space-y-2 py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Product</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Features</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Marketplace</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Company</a>
-                            </div>
-                            <div class="py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">Log
-                                    in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header>
 
         <div class="relative">
-            <div class="min-h-screen px-4 mx-auto max-w-[1440px] relative z-50 lg:py-48 relative z-50 flex">
-                <div class="grid grid-cols-2 items-center gap-10 grow">
+            <div class="min-h-screen px-4 mx-auto max-w-[1440px] relative z-50 py-48 relative z-50 flex">
+                <div class="grid lg:grid-cols-2 items-center gap-10 grow">
                     <div class="flex-shrink-0 lg:mx-0 lg:pt-8 space-y-8">
                         <h1
-                            class="font-sans text-4xl font-normal tracking-tight text-white sm:text-[95px] leading-none relative">
+                            class="font-dmsans text-[60px] sm:text-[95px] font-extralight tracking-tight text-white leading-none max-sm:w-3/4 max-sm:text-center max-sm:mx-auto">
                             Earn
                             up
-                            to <br><span class="font-bold">34% on crypto</span>
-                            <!-- bottom curve line -->
-                            <span class="absolute bottom-0 left-0 z-[-1] -translate-x-[10px] translate-y-[14px]">
-                                <img src="assets/image/svg/below-liner.svg" alt="below-liner"
-                                    class="w-full h-full max-w-[220px]" width="100" height="100" loading="lazy">
-                            </span>
+                            to
+                            <br>
+                            <p class="font-bold">
+                                <span class="relative">34%
+
+                                    <!-- bottom curve line -->
+                                    <span
+                                        class="absolute bottom-0 left-0 z-[-1] -translate-x-[10px] translate-y-[-8px]">
+                                        <img src="assets/image/svg/below-liner.svg" alt="below-liner"
+                                            class="w-full h-full max-w-[220px]" width="100" height="100" loading="lazy">
+                                    </span>
+                                </span>
+
+                                on crypto
+                            </p>
                         </h1>
-                        <p class="font-sans font-normal text-lg leading-8 text-white">Safe and secure way to generate
+                        <p
+                            class="font-dmsans font-normal text-sm md:text-lg text-white max-sm:w-3/4 max-sm:text-center max-sm:mx-auto">
+                            Safe and secure way
+                            to generate
                             yield on your
                             digital
                             assets.</p>
@@ -112,27 +76,35 @@
                             <div class="flex items-center gap-3">
                                 <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
                                     class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                                <p class="text-white">Daily interest payouts</p>
+                                <p class="font-dmsans font-normal text-[13px] md:text-lg text-white">Daily interest
+                                    payouts
+                                </p>
                             </div>
                             <div class="flex items-center gap-3">
                                 <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
                                     class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                                <p class="text-white">Daily interest payouts</p>
+                                <p class="font-dmsans font-normal text-[13px] md:text-lg text-white">Daily interest
+                                    payouts
+                                </p>
                             </div>
                             <div class="flex items-center gap-3">
                                 <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
                                     class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                                <p class="text-white">Daily interest payouts</p>
+                                <p class="font-dmsans font-normal text-[13px] md:text-lg text-white">Daily interest
+                                    payouts
+                                </p>
                             </div>
                             <div class="flex items-center gap-3">
                                 <img src="assets/image/svg/blue-ticked.svg" alt="blue-ticked"
                                     class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
-                                <p class="text-white">Daily interest payouts</p>
+                                <p class="font-dmsans font-normal text-[13px] md:text-lg text-white">Daily interest
+                                    payouts
+                                </p>
                             </div>
                         </div>
-                        <div class="flex items-center pt-4 gap-x-6">
+                        <div class="flex items-center max-sm:justify-center pt-4 gap-x-6">
                             <a href="#"
-                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable">Start
+                                class="bg-clickable px-10 py-3 md:py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable max-sm:flex-1 text-center">Start
                                 Earning Today</a>
                             <a href="#" class="text-sm font-semibold leading-6 text-white">
                                 <img src="assets/image/svg/Apple.svg" alt="Apple" class="w-full h-full max-w-[24px]"
@@ -146,24 +118,24 @@
                     </div>
 
                     <!-- For right side image or any content -->
-                    <!-- <div>
-                        <img src="assets/image/png&jpg/dummy image.png" alt="dummy image on side of content"
-                            class="w-full h-full object-contain max-h-[570px]">
-                    </div> -->
+                    <div class="min-h-[400px]">
+                        <!-- <img src="assets/image/png&jpg/dummy image.png" alt="dummy image on side of content"
+                            class="w-full h-full object-contain max-h-[570px]"> -->
+                    </div>
                 </div>
             </div>
             <!-- right side background blob -->
-            <div class="absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
+            <div class="absolute z-30 top-0 right-0 translate-x-[65%] md:-translate-y-[25%]">
                 <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
-                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                    class="object-contain w-full h-full max-sm:scale-[1.5]" width="100" height="100" loading="lazy">
             </div>
             <!-- left side background blob -->
             <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
                 <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
-                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                    class="object-contain w-full h-full max-sm:scale-[1.5]" width="100" height="100" loading="lazy">
             </div>
             <!-- bottom label image of cashaa -->
-            <div class="absolute z-0 bottom-0 left-0 right-0 translate-y-1/2">
+            <div class="mt-[-140px]">
                 <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa" class="object-contain w-full h-full"
                     width="100" height="100" loading="lazy">
             </div>
@@ -171,14 +143,15 @@
     </div>
 
     <!-- Awards winning company -->
-    <section class="bg-global py-10 md:py-16 xl:py-36 xl:pb-0">
+    <section class="bg-global hid den py-10 md:pt-16 xl:pt-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
-            <h2 class="font-sans font-light text-main-head text-white leading-none max-w-[40%] text-center mx-auto">
+            <h2
+                class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none md:max-w-[60%] lg:max-w-[40%] text-center mx-auto">
                 Awards winning
                 company</h2>
 
             <!-- achieving awards -->
-            <div class="grid grid-cols-5 gap-y-4 mt-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 max-md:gap-7 md:max-xl:gap-3 mt-8">
                 <span>
                     <img src="assets/image/png&jpg/Award 10.png" alt="achieving awards"
                         class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
@@ -189,7 +162,7 @@
                         class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
                         loading="lazy">
                 </span>
-                <span>
+                <span class="max-md:col-span-2">
                     <img src="assets/image/png&jpg/Award 7.png" alt="achieving awards"
                         class="w-full h-full object-contain max-w-[240px] mx-auto" width="100" height="100"
                         loading="lazy">
@@ -207,162 +180,180 @@
             </div>
 
             <!-- overall company reports -->
-            <div class="grid grid-cols-4 gap-y-4 mt-16 w-[90%] mx-auto text-center">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 max-lg:gap-12 mt-16 w-[90%] mx-auto text-center relative">
                 <div class="space-y-4">
-                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                    <h2 class="font-dmsans font-light text-main-head text-white leading-none">
                         4055
                     </h2>
-                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                    <h3 class="font-dmsans font-light text-2xl text-white leading-none capitalize">
                         Numbers of User</h3>
                 </div>
                 <div class="space-y-4">
-                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                    <h2 class="font-dmsans font-light text-main-head text-white leading-none">
                         $5.11 M
                     </h2>
-                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                    <h3 class="font-dmsans font-light text-2xl text-white leading-none capitalize">
                         Deposited Amount</h3>
                 </div>
                 <div class="space-y-4">
-                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                    <h2 class="font-dmsans font-light text-main-head text-white leading-none">
                         $10.22 M
                     </h2>
-                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                    <h3 class="font-dmsans font-light text-2xl text-white leading-none capitalize">
                         Colateral Value</h3>
                 </div>
                 <div class="space-y-4">
-                    <h2 class="font-sans font-light text-main-head text-white leading-none">
+                    <h2 class="font-dmsans font-light text-main-head text-white leading-none">
                         200.11%
                     </h2>
-                    <h3 class="font-sans font-light text-2xl text-white leading-none capitalize">
+                    <h3 class="font-dmsans font-light text-2xl text-white leading-none capitalize">
                         LTV Ratio</h3>
+                </div>
+
+                <!-- right side background blob -->
+                <div class="md:hidden   absolute z-30 top-0 right-0 translate-x-[65%] md:-translate-y-[25%]">
+                    <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                        class="object-contain w-full h-full max-sm:scale-[1.5]" width="100" height="100" loading="lazy">
+                </div>
+                <!-- left side background blob -->
+                <div class="md:hidden   absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
+                    <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                        class="object-contain w-full h-full max-sm:scale-[1.5]" width="100" height="100" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Earn more and Beat Inflation -->
-    <section class="bg-global relative py-10 md:py-16 xl:py-36">
+    <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
-            <div class="w-3/5 mx-auto">
-                <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+            <div class="md:w-11/12 xl:w-3/5 mx-auto">
+                <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
                     Earn more and Beat Inflation</h2>
-                <p class="font-sans font-normal text-lg leading-8 text-white px-8 text-center mt-6">Are you investing in
+                <p class="font-dmsans font-normal text-sm md:text-lg text-white px-8 text-center mt-6">Are you
+                    investing
+                    in
                     crypto because you
                     believe it is the currency of the future or to turn a profit? We help you HODL while earning
                     inflation-beating interest.</p>
 
-                <div class="grid grid-cols-2 gap-5 mt-10">
-                    <div class="border-2 border-white/10 p-10 bg-[#1d2232] space-y-4">
+                <div class="grid md:grid-cols-2 gap-5 mt-10 max-md:text-center">
+                    <div class="border-2 border-white/10 p-10 bg-blurry space-y-4">
                         <img src="assets/image/svg/start-inversting.svg" alt="start-inversting"
-                            class="object-contain w-full h-full max-w-[52px] max-h-[60px]" width="100" height="100"
-                            loading="lazy">
-                        <h3 class="font-sans font-semibold text-xl text-white">Earn Fixed interest in any
+                            class="object-contain w-full h-full max-w-[52px] max-h-[60px] max-md:mx-auto" width="100"
+                            height="100" loading="lazy">
+                        <h3 class="font-dmsans font-semibold text-lg md:text-xl text-white">Earn Fixed interest in any
                             market
                             condition</h3>
-                        <h4 class="font-sans font-normal text-lg text-white">Worried about rampant inflation eating into
+                        <h4 class="font-dmsans font-normal text-sm md:text-lg text-white">Worried about rampant
+                            inflation eating
+                            into
                             your savings? At Cashaa, we help you put your
                             idle assets to work with a fixed source of passive income.</h4>
                     </div>
-                    <div class="border-2 border-white/10 p-10 bg-[#1d2232] space-y-4 pr-20">
+                    <div class="border-2 border-white/10 p-10 bg-blurry space-y-4 pr-20">
                         <img src="assets/image/svg/start-earning.svg" alt="start-earning"
-                            class="object-contain w-full h-full max-w-[52px] max-h-[60px]" width="100" height="100"
-                            loading="lazy">
-                        <h3 class="font-sans font-semibold text-xl text-white">Why wait! Start earning right away</h3>
-                        <h4 class="font-sans font-normal text-lg text-white">
+                            class="object-contain w-full h-full max-w-[52px] max-h-[60px] max-md:mx-auto" width="100"
+                            height="100" loading="lazy">
+                        <h3 class="font-dmsans font-semibold text-lg md:text-xl text-white">Why wait! Start earning
+                            right away</h3>
+                        <h4 class="font-dmsans font-normal text-sm md:text-lg text-white">
                             Just top-up your Cashaa account and start earning up to 20% annual interest.</h4>
                     </div>
                 </div>
             </div>
         </div>
         <!-- right side background blob -->
-        <div class="absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
+        <div class="max-md:hidden absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
             <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
                 class="object-contain w-full h-full" width="100" height="100" loading="lazy">
         </div>
         <!-- left side background blob -->
-        <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
+        <div class="max-md:hidden absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-1/2">
             <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
                 class="object-contain w-full h-full" width="100" height="100" loading="lazy">
         </div>
     </section>
 
     <!-- marquee section (Current yield on assets) -->
-    <div class="bg-global relative">
-        <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
-            Current yield on assets</h2>
+    <div class="bg-global hid den relative">
+        <div class="px-4">
+            <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
+                Current yield on assets</h2>
 
-        <div class="grid grid-flow-col auto-cols-max 2xl:auto-cols-auto gap-5 mt-10 overflow-x-auto"
-            style="scrollbar-width: none;">
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-1.png" alt="assets-1"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+            <div class="grid max-md:grid-cols-2 md:grid-flow-col md:auto-cols-max 2xl:auto-cols-auto gap-4 lg:gap-5 mt-10 overflow-x-auto"
+                style="scrollbar-width: none;">
+                <div class="border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-1.png" alt="assets-1"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-2.png" alt="assets-2"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-2.png" alt="assets-2"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-3.png" alt="assets-3"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-3.png" alt="assets-3"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-4.png" alt="assets-4"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-4.png" alt="assets-4"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-5.png" alt="assets-5"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="max-md:hidden border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-5.png" alt="assets-5"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-6.png" alt="assets-6"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="max-md:hidden border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-6.png" alt="assets-6"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-7.png" alt="assets-7"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="max-md:hidden border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-7.png" alt="assets-7"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-1.png" alt="assets-8"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="max-md:hidden border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-1.png" alt="assets-8"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-white/10 p-5 bg-[#1d2232] flex items-center gap-4 max-w-[200px]">
-                <img src="assets/image/png&jpg/assets-2.png" alt="assets-9"
-                    class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
-                <div>
-                    <h3 class="font-sans font-normal text-xl text-white uppercase">ETH</h3>
-                    <h4 class="font-sans font-semibold text-lg text-highlighter">11% APR</h4>
+                <div class="max-md:hidden border-2 border-white/10 p-5 bg-blurry flex items-center gap-4 max-w-[200px]">
+                    <img src="assets/image/png&jpg/assets-2.png" alt="assets-9"
+                        class="object-contain w-full h-full max-w-[52px]" width="100" height="100" loading="lazy">
+                    <div>
+                        <h3 class="font-dmsans font-normal text-xl text-white uppercase">ETH</h3>
+                        <h4 class="font-dmsans font-semibold text-sm md:text-lg text-highlighter">11% APR</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -374,14 +365,559 @@
     </div>
 
     <!-- Earn Calculator -->
-    <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
+    <section class="bg-global hid den py-10 md:py-16 xl:py-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
             <div class="w-3/5 mx-auto">
-                <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+                <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
                     Earn Calculator</h2>
-                <p class="font-sans font-normal text-lg leading-8 text-white px-8 text-center mt-6">Select a Token,
+                <p class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white px-8 text-center mt-6">Select
+                    a Token,
                     Amount, Loyalty Tier and Term to calculate your yields</p>
             </div>
+            <style>
+                .tab-content {
+                    display: none;
+                }
+            </style>
+            <div class="mt-12">
+                <input type="checkbox" class="hidden" id="checkbox1">
+                <input type="checkbox" class="hidden" id="checkbox2" checked>
+                <!-- tab labels -->
+                <div class="flex items-center gap-4 border border-highlighter w-fit mx-auto p-2 rounded-full">
+                    <label for="checkbox1" id="label1"
+                        class="p-3 px-10 font-dmsans font-bold text-md text-white cursor-pointer block rounded-full">Earn
+                        in Kind</label>
+                    <label for="checkbox2" id="label2"
+                        class="p-3 px-10 font-dmsans font-bold text-md text-white cursor-pointer block rounded-full">Earn
+                        in CAS</label>
+                </div>
+
+                <div id="content1" class="tab-content">
+                    <div class="grid grid-cols-4 mt-10">
+                        <div
+                            class="relative p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup">
+                            <button id="dropdownButton" class="space-y-4 w-full">
+                                <div class="flex items-center justify-between">
+                                    <p class="font-dmsans font-normal text-xl text-white">Token</p>
+
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.3565" cy="12.3565" r="12.3565" fill="#3F6FF9"
+                                                fill-opacity="0.1" />
+                                            <path d="M7.03711 10.689L12.037 15.689L17.0371 10.689" stroke="#3F6FF9"
+                                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-3 w-full text-sm font-medium text-white">
+                                    <img id="selectedImage" src="assets/image/png&jpg/assets-1.png" alt="Selected"
+                                        class="w-full h-full object-contain max-w-[30px]">
+                                    <span>
+                                        <span class="font-dmsans font-normal text-sm md:text-lg text-white block">
+                                            USDT
+                                        </span>
+                                        <span class="font-dmsans font-bold text-md text-[#A6B0D5] block"
+                                            id="selectedText">Option 1</span>
+                                    </span>
+                                </div>
+                            </button>
+
+                            <div id="dropdownMenu"
+                                class="absolute top-full left-1/2 -translate-x-1/2 hidden w-3/4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-[#14192a] dropdownButton">
+                                <div class="absolute top-[20px] right-[20px] cursor-pointer" id="close-dropy">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0958 2.19385L1.99915 12.2905" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                        <path d="M12.0958 12.2905L1.99915 2.19392" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="p-6 py-3" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdownButton">
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Option 1" data-image="assets/image/png&jpg/assets-1.png">
+                                        <img src="assets/image/png&jpg/assets-1.png" alt="Option 1"
+                                            class="w-full h-full object-contain max-w-[30px]">Option 1
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Option 2" data-image="assets/image/png&jpg/assets-2.png">
+                                        <img src="assets/image/png&jpg/assets-2.png" alt="Option 2"
+                                            class="w-full h-full object-contain max-w-[30px]">Option 2
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Option 3" data-image="assets/image/png&jpg/assets-3.png">
+                                        <img src="assets/image/png&jpg/assets-3.png" alt="Option 3"
+                                            class="w-full h-full object-contain max-w-[30px]">Option 3
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup space-y-4">
+                            <div class="flex items-center gap-4">
+                                <p class="font-dmsans font-normal text-xl text-white">Amount</p>
+
+                                <spanm class="cursor-pointer">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.53646 5.35571V6.06405M8.53646 7.83488V11.0224M8.53646 15.2724C12.4485 15.2724 15.6198 12.1011 15.6198 8.18905C15.6198 4.27703 12.4485 1.10571 8.53646 1.10571C4.62444 1.10571 1.45312 4.27703 1.45312 8.18905C1.45312 12.1011 4.62444 15.2724 8.53646 15.2724Z"
+                                            stroke="#3F6FF9" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    </span>
+                            </div>
+                            <p class="font-dmsans font-bold text-sm md:text-lg text-white">5000.00</p>
+                        </div>
+
+                        <div
+                            class="relative p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup">
+                            <button id="dropdownButton1" class="space-y-4 w-full">
+                                <div class="flex items-center justify-between">
+                                    <p class="font-dmsans font-normal text-xl text-white">Plan Type (CAS Stake)</p>
+
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.3565" cy="12.3565" r="12.3565" fill="#3F6FF9"
+                                                fill-opacity="0.1" />
+                                            <path d="M7.03711 10.689L12.037 15.689L17.0371 10.689" stroke="#3F6FF9"
+                                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-3 w-full text-sm font-medium text-white">
+                                    <img id="selectedImage" src="assets/image/png&jpg/assets-1.png" alt="Selected"
+                                        class="w-full h-full object-contain max-w-[30px]">
+
+                                    <span class="font-dmsans font-bold text-md text-[#A6B0D5] block"
+                                        id="selectedText">Diamond</span>
+                                </div>
+                            </button>
+
+                            <div id="dropdownMenu"
+                                class="absolute top-full left-1/2 -translate-x-1/2 hidden w-3/4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-[#14192a] dropdownButton1">
+                                <div class="absolute top-[20px] right-[20px] cursor-pointer" id="close-dropy">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0958 2.19385L1.99915 12.2905" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                        <path d="M12.0958 12.2905L1.99915 2.19392" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="p-6 py-3" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdownButton">
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Base" data-image="assets/image/png&jpg/assets-1.png">
+                                        <img src="assets/image/png&jpg/assets-1.png" alt="Base"
+                                            class="w-full h-full object-contain max-w-[30px]">Base
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Silver" data-image="assets/image/png&jpg/assets-2.png">
+                                        <img src="assets/image/png&jpg/assets-2.png" alt="Silver"
+                                            class="w-full h-full object-contain max-w-[30px]">Silver
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Gold" data-image="assets/image/png&jpg/assets-3.png">
+                                        <img src="assets/image/png&jpg/assets-3.png" alt="Gold"
+                                            class="w-full h-full object-contain max-w-[30px]">Gold
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup">
+                            <button id="dropdownButton2" class="space-y-4 w-full">
+                                <div class="flex items-center justify-between">
+                                    <p class="font-dmsans font-normal text-xl text-white">Term 12 month term</p>
+
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.3565" cy="12.3565" r="12.3565" fill="#3F6FF9"
+                                                fill-opacity="0.1" />
+                                            <path d="M7.03711 10.689L12.037 15.689L17.0371 10.689" stroke="#3F6FF9"
+                                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-3 w-full text-sm font-medium text-white">
+                                    <img id="selectedImage" src="assets/image/png&jpg/assets-1.png" alt="Selected"
+                                        class="w-full h-full object-contain max-w-[30px]">
+                                    <span>
+                                        <span class="font-dmsans font-normal text-sm md:text-lg text-white block">
+                                            USDT
+                                        </span>
+                                        <span class="font-dmsans font-bold text-md text-[#A6B0D5] block"
+                                            id="selectedText">Option 1</span>
+                                    </span>
+                                </div>
+                            </button>
+
+                            <div id="dropdownMenu"
+                                class="absolute top-full left-1/2 -translate-x-1/2 hidden w-3/4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-[#14192a] dropdownButton2">
+                                <div class="absolute top-[20px] right-[20px] cursor-pointer" id="close-dropy">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0958 2.19385L1.99915 12.2905" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                        <path d="M12.0958 12.2905L1.99915 2.19392" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="p-6 py-3" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdownButton">
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Base" data-image="assets/image/png&jpg/assets-1.png">
+                                        <img src="assets/image/png&jpg/assets-1.png" alt="Base"
+                                            class="w-full h-full object-contain max-w-[30px]">Base
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Silver" data-image="assets/image/png&jpg/assets-2.png">
+                                        <img src="assets/image/png&jpg/assets-2.png" alt="Silver"
+                                            class="w-full h-full object-contain max-w-[30px]">Silver
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Gold" data-image="assets/image/png&jpg/assets-3.png">
+                                        <img src="assets/image/png&jpg/assets-3.png" alt="Gold"
+                                            class="w-full h-full object-contain max-w-[30px]">Gold
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 mt-5">
+                        <div
+                            class="bg-[url(assets/image/png&jpg/blogs-content-images.png)] bg-no-repeat bg-fully py-16 px-24 flex flex-col justify-center items-center">
+                            <div>
+                                <span class="font-dmsans font-normal text-[37px] text-highlighter">Interest
+                                    Income</span>
+                                <h3 class="font-dmsans font-normal text-huge text-white">$280.00 <span
+                                        class="text-sm md:text-lg">USD</span></h3>
+                                <p class="font-dmsans font-normal text-[33px] text-white">paid in CAS</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div
+                                class="bg-[url(assets/image/png&jpg/blogs-content-images.png)] bg-no-repeat bg-fully py-12 px-20 grid grid-cols-3 items-center">
+                                <span>
+                                    <svg width="55" height="79" viewBox="0 0 55 79" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M27.4566 55.2345C34.6974 55.2345 41.6416 52.3581 46.7615 47.2381C51.8815 42.1181 54.7579 35.1739 54.7579 27.9332C54.7579 20.6924 51.8815 13.7482 46.7615 8.62821C41.6416 3.50822 34.6974 0.631836 27.4566 0.631836C20.2158 0.631836 13.2716 3.50822 8.15164 8.62821C3.03165 13.7482 0.155273 20.6924 0.155273 27.9332C0.155273 35.1739 3.03165 42.1181 8.15164 47.2381C13.2716 52.3581 20.2158 55.2345 27.4566 55.2345ZM27.4566 16.2326C26.3489 16.2326 25.6079 17.5587 24.1258 20.2225L23.7436 20.9089C23.3224 21.6656 23.1118 22.04 22.7803 22.2896C22.4527 22.5392 22.0431 22.6328 21.228 22.8161L20.4831 22.9877C17.6047 23.639 16.1655 23.9628 15.8223 25.0626C15.4791 26.1625 16.462 27.313 18.4238 29.6063L18.9308 30.1992C19.4885 30.8505 19.7693 31.1742 19.8941 31.5798C20.0189 31.9855 19.976 32.4184 19.8941 33.2881L19.8161 34.0799C19.5197 37.1415 19.3715 38.6743 20.2685 39.3529C21.1656 40.0315 22.5112 39.4114 25.2062 38.1712L25.9004 37.8513C26.6688 37.5003 27.051 37.3209 27.4566 37.3209C27.8622 37.3209 28.2444 37.5003 29.0128 37.8513L29.707 38.1712C32.402 39.4114 33.7515 40.0315 34.6446 39.3529C35.5417 38.6743 35.3935 37.1415 35.0971 34.0799L35.0191 33.2881C34.9372 32.4184 34.8943 31.9855 35.0191 31.5798C35.1439 31.1781 35.4247 30.8505 35.9824 30.1992L36.4894 29.6063C38.4512 27.313 39.4341 26.1664 39.0909 25.0626C38.7476 23.9589 37.3085 23.639 34.4301 22.9877L33.6891 22.8161C32.8701 22.6328 32.4605 22.5431 32.129 22.2896C31.8014 22.04 31.5908 21.6656 31.1696 20.9089L30.7874 20.2225C29.3053 17.5587 28.5642 16.2326 27.4566 16.2326Z"
+                                            fill="#3F6FF9" />
+                                        <path
+                                            d="M8.31792 55.005L6.83975 60.3951C4.39043 69.3343 3.16577 73.8039 4.79995 76.2493C5.37328 77.1074 6.14162 77.7938 7.03476 78.2501C9.57768 79.545 13.5091 77.4974 21.368 73.4022C23.9811 72.0371 25.2915 71.3585 26.68 71.2103C27.196 71.1551 27.7163 71.1551 28.2323 71.2103C29.6208 71.3585 30.9273 72.041 33.5443 73.4022C41.4032 77.4974 45.3346 79.545 47.8775 78.2501C48.7707 77.7938 49.539 77.1074 50.1123 76.2493C51.7504 73.8039 50.5219 69.3343 48.0725 60.3951L46.5944 55.005C41.1887 58.835 34.5818 61.0854 27.4561 61.0854C20.3305 61.0854 13.7275 58.835 8.31792 55.005Z"
+                                            fill="#3F6FF9" />
+                                    </svg>
+
+                                </span>
+
+                                <p class="font-dmsans font-normal text-rare text-white">Optimized rewards p.a.</p>
+                                <h4 class="font-dmsans font-semibold text-[60px] text-white">5.20%</h4>
+                            </div>
+                            <div
+                                class="bg-[url(assets/image/png&jpg/blogs-content-images.png)] bg-no-repeat bg-fully py-12 px-20 grid grid-cols-3 items-center">
+                                <span>
+                                    <svg width="55" height="79" viewBox="0 0 55 79" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M27.4566 55.2345C34.6974 55.2345 41.6416 52.3581 46.7615 47.2381C51.8815 42.1181 54.7579 35.1739 54.7579 27.9332C54.7579 20.6924 51.8815 13.7482 46.7615 8.62821C41.6416 3.50822 34.6974 0.631836 27.4566 0.631836C20.2158 0.631836 13.2716 3.50822 8.15164 8.62821C3.03165 13.7482 0.155273 20.6924 0.155273 27.9332C0.155273 35.1739 3.03165 42.1181 8.15164 47.2381C13.2716 52.3581 20.2158 55.2345 27.4566 55.2345ZM27.4566 16.2326C26.3489 16.2326 25.6079 17.5587 24.1258 20.2225L23.7436 20.9089C23.3224 21.6656 23.1118 22.04 22.7803 22.2896C22.4527 22.5392 22.0431 22.6328 21.228 22.8161L20.4831 22.9877C17.6047 23.639 16.1655 23.9628 15.8223 25.0626C15.4791 26.1625 16.462 27.313 18.4238 29.6063L18.9308 30.1992C19.4885 30.8505 19.7693 31.1742 19.8941 31.5798C20.0189 31.9855 19.976 32.4184 19.8941 33.2881L19.8161 34.0799C19.5197 37.1415 19.3715 38.6743 20.2685 39.3529C21.1656 40.0315 22.5112 39.4114 25.2062 38.1712L25.9004 37.8513C26.6688 37.5003 27.051 37.3209 27.4566 37.3209C27.8622 37.3209 28.2444 37.5003 29.0128 37.8513L29.707 38.1712C32.402 39.4114 33.7515 40.0315 34.6446 39.3529C35.5417 38.6743 35.3935 37.1415 35.0971 34.0799L35.0191 33.2881C34.9372 32.4184 34.8943 31.9855 35.0191 31.5798C35.1439 31.1781 35.4247 30.8505 35.9824 30.1992L36.4894 29.6063C38.4512 27.313 39.4341 26.1664 39.0909 25.0626C38.7476 23.9589 37.3085 23.639 34.4301 22.9877L33.6891 22.8161C32.8701 22.6328 32.4605 22.5431 32.129 22.2896C31.8014 22.04 31.5908 21.6656 31.1696 20.9089L30.7874 20.2225C29.3053 17.5587 28.5642 16.2326 27.4566 16.2326Z"
+                                            fill="#3F6FF9" />
+                                        <path
+                                            d="M8.31792 55.005L6.83975 60.3951C4.39043 69.3343 3.16577 73.8039 4.79995 76.2493C5.37328 77.1074 6.14162 77.7938 7.03476 78.2501C9.57768 79.545 13.5091 77.4974 21.368 73.4022C23.9811 72.0371 25.2915 71.3585 26.68 71.2103C27.196 71.1551 27.7163 71.1551 28.2323 71.2103C29.6208 71.3585 30.9273 72.041 33.5443 73.4022C41.4032 77.4974 45.3346 79.545 47.8775 78.2501C48.7707 77.7938 49.539 77.1074 50.1123 76.2493C51.7504 73.8039 50.5219 69.3343 48.0725 60.3951L46.5944 55.005C41.1887 58.835 34.5818 61.0854 27.4561 61.0854C20.3305 61.0854 13.7275 58.835 8.31792 55.005Z"
+                                            fill="#3F6FF9" />
+                                    </svg>
+
+                                </span>
+
+                                <p class="font-dmsans font-normal text-rare text-white">Optimized rewards p.a.</p>
+                                <h4 class="font-dmsans font-semibold text-[60px] text-white">5.20%</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content2" class="tab-content">
+                    <div class="grid grid-cols-4 mt-10">
+                        <div
+                            class="relative p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup">
+                            <button id="dropdownButton" class="space-y-4 w-full">
+                                <div class="flex items-center justify-between">
+                                    <p class="font-dmsans font-normal text-xl text-white">Token</p>
+
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.3565" cy="12.3565" r="12.3565" fill="#3F6FF9"
+                                                fill-opacity="0.1" />
+                                            <path d="M7.03711 10.689L12.037 15.689L17.0371 10.689" stroke="#3F6FF9"
+                                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-3 w-full text-sm font-medium text-white">
+                                    <img id="selectedImage" src="assets/image/png&jpg/assets-1.png" alt="Selected"
+                                        class="w-full h-full object-contain max-w-[30px]">
+                                    <span>
+                                        <span class="font-dmsans font-normal text-sm md:text-lg text-white block">
+                                            USDT
+                                        </span>
+                                        <span class="font-dmsans font-bold text-md text-[#A6B0D5] block"
+                                            id="selectedText">Option 1</span>
+                                    </span>
+                                </div>
+                            </button>
+
+                            <div id="dropdownMenu"
+                                class="absolute top-full left-1/2 -translate-x-1/2 hidden w-3/4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-[#14192a] dropdownButton">
+                                <div class="absolute top-[20px] right-[20px] cursor-pointer" id="close-dropy">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0958 2.19385L1.99915 12.2905" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                        <path d="M12.0958 12.2905L1.99915 2.19392" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="p-6 py-3" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdownButton">
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Option 1" data-image="assets/image/png&jpg/assets-1.png">
+                                        <img src="assets/image/png&jpg/assets-1.png" alt="Option 1"
+                                            class="w-full h-full object-contain max-w-[30px]">Option 1
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Option 2" data-image="assets/image/png&jpg/assets-2.png">
+                                        <img src="assets/image/png&jpg/assets-2.png" alt="Option 2"
+                                            class="w-full h-full object-contain max-w-[30px]">Option 2
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Option 3" data-image="assets/image/png&jpg/assets-3.png">
+                                        <img src="assets/image/png&jpg/assets-3.png" alt="Option 3"
+                                            class="w-full h-full object-contain max-w-[30px]">Option 3
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup space-y-4">
+                            <div class="flex items-center gap-4">
+                                <p class="font-dmsans font-normal text-xl text-white">Amount</p>
+
+                                <spanm class="cursor-pointer">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.53646 5.35571V6.06405M8.53646 7.83488V11.0224M8.53646 15.2724C12.4485 15.2724 15.6198 12.1011 15.6198 8.18905C15.6198 4.27703 12.4485 1.10571 8.53646 1.10571C4.62444 1.10571 1.45312 4.27703 1.45312 8.18905C1.45312 12.1011 4.62444 15.2724 8.53646 15.2724Z"
+                                            stroke="#3F6FF9" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    </span>
+                            </div>
+                            <p class="font-dmsans font-bold text-sm md:text-lg text-white">5000.00</p>
+                        </div>
+
+                        <div
+                            class="relative p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup">
+                            <button id="dropdownButton1" class="space-y-4 w-full">
+                                <div class="flex items-center justify-between">
+                                    <p class="font-dmsans font-normal text-xl text-white">Plan Type (CAS Stake)</p>
+
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.3565" cy="12.3565" r="12.3565" fill="#3F6FF9"
+                                                fill-opacity="0.1" />
+                                            <path d="M7.03711 10.689L12.037 15.689L17.0371 10.689" stroke="#3F6FF9"
+                                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-3 w-full text-sm font-medium text-white">
+                                    <img id="selectedImage" src="assets/image/png&jpg/assets-1.png" alt="Selected"
+                                        class="w-full h-full object-contain max-w-[30px]">
+
+                                    <span class="font-dmsans font-bold text-md text-[#A6B0D5] block"
+                                        id="selectedText">Diamond</span>
+                                </div>
+                            </button>
+
+                            <div id="dropdownMenu"
+                                class="absolute top-full left-1/2 -translate-x-1/2 hidden w-3/4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-[#14192a] dropdownButton1">
+                                <div class="absolute top-[20px] right-[20px] cursor-pointer" id="close-dropy">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0958 2.19385L1.99915 12.2905" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                        <path d="M12.0958 12.2905L1.99915 2.19392" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="p-6 py-3" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdownButton">
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Base" data-image="assets/image/png&jpg/assets-1.png">
+                                        <img src="assets/image/png&jpg/assets-1.png" alt="Base"
+                                            class="w-full h-full object-contain max-w-[30px]">Base
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Silver" data-image="assets/image/png&jpg/assets-2.png">
+                                        <img src="assets/image/png&jpg/assets-2.png" alt="Silver"
+                                            class="w-full h-full object-contain max-w-[30px]">Silver
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Gold" data-image="assets/image/png&jpg/assets-3.png">
+                                        <img src="assets/image/png&jpg/assets-3.png" alt="Gold"
+                                            class="w-full h-full object-contain max-w-[30px]">Gold
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative p-8 border last:border-r border-r-0 border-white/10 bg-blurry contain-popup">
+                            <button id="dropdownButton2" class="space-y-4 w-full">
+                                <div class="flex items-center justify-between">
+                                    <p class="font-dmsans font-normal text-xl text-white">Term 12 month term</p>
+
+                                    <span>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.3565" cy="12.3565" r="12.3565" fill="#3F6FF9"
+                                                fill-opacity="0.1" />
+                                            <path d="M7.03711 10.689L12.037 15.689L17.0371 10.689" stroke="#3F6FF9"
+                                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-3 w-full text-sm font-medium text-white">
+                                    <img id="selectedImage" src="assets/image/png&jpg/assets-1.png" alt="Selected"
+                                        class="w-full h-full object-contain max-w-[30px]">
+                                    <span>
+                                        <span class="font-dmsans font-normal text-sm md:text-lg text-white block">
+                                            USDT
+                                        </span>
+                                        <span class="font-dmsans font-bold text-md text-[#A6B0D5] block"
+                                            id="selectedText">Option 1</span>
+                                    </span>
+                                </div>
+                            </button>
+
+                            <div id="dropdownMenu"
+                                class="absolute top-full left-1/2 -translate-x-1/2 hidden w-3/4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-[#14192a] dropdownButton2">
+                                <div class="absolute top-[20px] right-[20px] cursor-pointer" id="close-dropy">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0958 2.19385L1.99915 12.2905" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                        <path d="M12.0958 12.2905L1.99915 2.19392" stroke="#3F6FF9"
+                                            stroke-width="3.58122" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="p-6 py-3" role="menu" aria-orientation="vertical"
+                                    aria-labelledby="dropdownButton">
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Base" data-image="assets/image/png&jpg/assets-1.png">
+                                        <img src="assets/image/png&jpg/assets-1.png" alt="Base"
+                                            class="w-full h-full object-contain max-w-[30px]">Base
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Silver" data-image="assets/image/png&jpg/assets-2.png">
+                                        <img src="assets/image/png&jpg/assets-2.png" alt="Silver"
+                                            class="w-full h-full object-contain max-w-[30px]">Silver
+                                    </a>
+                                    <a href="#"
+                                        class="block px-1 font-dmsans font-normal text-sm md:text-lg text-white hover:bg-[#14192a] flex items-center gap-2.5 py-3 border-b last:border-b-0 border-white/10"
+                                        data-value="Gold" data-image="assets/image/png&jpg/assets-3.png">
+                                        <img src="assets/image/png&jpg/assets-3.png" alt="Gold"
+                                            class="w-full h-full object-contain max-w-[30px]">Gold
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 mt-5">
+                        <div
+                            class="bg-[url(assets/image/png&jpg/blogs-content-images.png)] bg-no-repeat bg-fully py-16 px-24 flex flex-col justify-center items-center">
+                            <div>
+                                <span class="font-dmsans font-normal text-[37px] text-highlighter">Interest
+                                    Income</span>
+                                <h3 class="font-dmsans font-normal text-huge text-white">$260.00 <span
+                                        class="text-sm md:text-lg">USD</span></h3>
+                                <p class="font-dmsans font-normal text-[33px] text-white">paid in CAS</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div
+                                class="bg-[url(assets/image/png&jpg/blogs-content-images.png)] bg-no-repeat bg-fully py-12 px-20 grid grid-cols-3 items-center">
+                                <span>
+                                    <svg width="55" height="79" viewBox="0 0 55 79" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M27.4566 55.2345C34.6974 55.2345 41.6416 52.3581 46.7615 47.2381C51.8815 42.1181 54.7579 35.1739 54.7579 27.9332C54.7579 20.6924 51.8815 13.7482 46.7615 8.62821C41.6416 3.50822 34.6974 0.631836 27.4566 0.631836C20.2158 0.631836 13.2716 3.50822 8.15164 8.62821C3.03165 13.7482 0.155273 20.6924 0.155273 27.9332C0.155273 35.1739 3.03165 42.1181 8.15164 47.2381C13.2716 52.3581 20.2158 55.2345 27.4566 55.2345ZM27.4566 16.2326C26.3489 16.2326 25.6079 17.5587 24.1258 20.2225L23.7436 20.9089C23.3224 21.6656 23.1118 22.04 22.7803 22.2896C22.4527 22.5392 22.0431 22.6328 21.228 22.8161L20.4831 22.9877C17.6047 23.639 16.1655 23.9628 15.8223 25.0626C15.4791 26.1625 16.462 27.313 18.4238 29.6063L18.9308 30.1992C19.4885 30.8505 19.7693 31.1742 19.8941 31.5798C20.0189 31.9855 19.976 32.4184 19.8941 33.2881L19.8161 34.0799C19.5197 37.1415 19.3715 38.6743 20.2685 39.3529C21.1656 40.0315 22.5112 39.4114 25.2062 38.1712L25.9004 37.8513C26.6688 37.5003 27.051 37.3209 27.4566 37.3209C27.8622 37.3209 28.2444 37.5003 29.0128 37.8513L29.707 38.1712C32.402 39.4114 33.7515 40.0315 34.6446 39.3529C35.5417 38.6743 35.3935 37.1415 35.0971 34.0799L35.0191 33.2881C34.9372 32.4184 34.8943 31.9855 35.0191 31.5798C35.1439 31.1781 35.4247 30.8505 35.9824 30.1992L36.4894 29.6063C38.4512 27.313 39.4341 26.1664 39.0909 25.0626C38.7476 23.9589 37.3085 23.639 34.4301 22.9877L33.6891 22.8161C32.8701 22.6328 32.4605 22.5431 32.129 22.2896C31.8014 22.04 31.5908 21.6656 31.1696 20.9089L30.7874 20.2225C29.3053 17.5587 28.5642 16.2326 27.4566 16.2326Z"
+                                            fill="#3F6FF9" />
+                                        <path
+                                            d="M8.31792 55.005L6.83975 60.3951C4.39043 69.3343 3.16577 73.8039 4.79995 76.2493C5.37328 77.1074 6.14162 77.7938 7.03476 78.2501C9.57768 79.545 13.5091 77.4974 21.368 73.4022C23.9811 72.0371 25.2915 71.3585 26.68 71.2103C27.196 71.1551 27.7163 71.1551 28.2323 71.2103C29.6208 71.3585 30.9273 72.041 33.5443 73.4022C41.4032 77.4974 45.3346 79.545 47.8775 78.2501C48.7707 77.7938 49.539 77.1074 50.1123 76.2493C51.7504 73.8039 50.5219 69.3343 48.0725 60.3951L46.5944 55.005C41.1887 58.835 34.5818 61.0854 27.4561 61.0854C20.3305 61.0854 13.7275 58.835 8.31792 55.005Z"
+                                            fill="#3F6FF9" />
+                                    </svg>
+
+                                </span>
+
+                                <p class="font-dmsans font-normal text-rare text-white">Optimized rewards p.a.</p>
+                                <h4 class="font-dmsans font-semibold text-[60px] text-white">5.20%</h4>
+                            </div>
+                            <div
+                                class="bg-[url(assets/image/png&jpg/blogs-content-images.png)] bg-no-repeat bg-fully py-12 px-20 grid grid-cols-3 items-center">
+                                <span>
+                                    <svg width="55" height="79" viewBox="0 0 55 79" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M27.4566 55.2345C34.6974 55.2345 41.6416 52.3581 46.7615 47.2381C51.8815 42.1181 54.7579 35.1739 54.7579 27.9332C54.7579 20.6924 51.8815 13.7482 46.7615 8.62821C41.6416 3.50822 34.6974 0.631836 27.4566 0.631836C20.2158 0.631836 13.2716 3.50822 8.15164 8.62821C3.03165 13.7482 0.155273 20.6924 0.155273 27.9332C0.155273 35.1739 3.03165 42.1181 8.15164 47.2381C13.2716 52.3581 20.2158 55.2345 27.4566 55.2345ZM27.4566 16.2326C26.3489 16.2326 25.6079 17.5587 24.1258 20.2225L23.7436 20.9089C23.3224 21.6656 23.1118 22.04 22.7803 22.2896C22.4527 22.5392 22.0431 22.6328 21.228 22.8161L20.4831 22.9877C17.6047 23.639 16.1655 23.9628 15.8223 25.0626C15.4791 26.1625 16.462 27.313 18.4238 29.6063L18.9308 30.1992C19.4885 30.8505 19.7693 31.1742 19.8941 31.5798C20.0189 31.9855 19.976 32.4184 19.8941 33.2881L19.8161 34.0799C19.5197 37.1415 19.3715 38.6743 20.2685 39.3529C21.1656 40.0315 22.5112 39.4114 25.2062 38.1712L25.9004 37.8513C26.6688 37.5003 27.051 37.3209 27.4566 37.3209C27.8622 37.3209 28.2444 37.5003 29.0128 37.8513L29.707 38.1712C32.402 39.4114 33.7515 40.0315 34.6446 39.3529C35.5417 38.6743 35.3935 37.1415 35.0971 34.0799L35.0191 33.2881C34.9372 32.4184 34.8943 31.9855 35.0191 31.5798C35.1439 31.1781 35.4247 30.8505 35.9824 30.1992L36.4894 29.6063C38.4512 27.313 39.4341 26.1664 39.0909 25.0626C38.7476 23.9589 37.3085 23.639 34.4301 22.9877L33.6891 22.8161C32.8701 22.6328 32.4605 22.5431 32.129 22.2896C31.8014 22.04 31.5908 21.6656 31.1696 20.9089L30.7874 20.2225C29.3053 17.5587 28.5642 16.2326 27.4566 16.2326Z"
+                                            fill="#3F6FF9" />
+                                        <path
+                                            d="M8.31792 55.005L6.83975 60.3951C4.39043 69.3343 3.16577 73.8039 4.79995 76.2493C5.37328 77.1074 6.14162 77.7938 7.03476 78.2501C9.57768 79.545 13.5091 77.4974 21.368 73.4022C23.9811 72.0371 25.2915 71.3585 26.68 71.2103C27.196 71.1551 27.7163 71.1551 28.2323 71.2103C29.6208 71.3585 30.9273 72.041 33.5443 73.4022C41.4032 77.4974 45.3346 79.545 47.8775 78.2501C48.7707 77.7938 49.539 77.1074 50.1123 76.2493C51.7504 73.8039 50.5219 69.3343 48.0725 60.3951L46.5944 55.005C41.1887 58.835 34.5818 61.0854 27.4561 61.0854C20.3305 61.0854 13.7275 58.835 8.31792 55.005Z"
+                                            fill="#3F6FF9" />
+                                    </svg>
+
+                                </span>
+
+                                <p class="font-dmsans font-normal text-rare text-white">Optimized rewards p.a.</p>
+                                <h4 class="font-dmsans font-semibold text-[60px] text-white">5.20%</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- right side background blob -->
         <div class="absolute z-30 top-0 right-0 translate-x-[65%] -translate-y-[25%]">
@@ -394,26 +930,29 @@
                 class="object-contain w-full h-full" width="100" height="100" loading="lazy">
         </div>
     </section>
+
     <!-- Why Earn with Cashaa? -->
-    <section class="bg-global relative py-10 md:py-16 xl:py-36">
+    <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
-            <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
+            <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
                 Why Earn with Cashaa?</h2>
-            <p class="font-sans font-normal text-lg leading-8 text-white px-8 text-center mt-6">Safe, secure and
+            <p class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white px-8 text-center mt-6">Safe,
+                secure and
                 fixed passive income to put your idle assets to work</p>
 
             <div class="space-y-6">
                 <div class="grid grid-cols-2 items-center mt-10">
                     <div class="w-3/5 pr-10 space-y-6">
-                        <h3 class="font-sans font-normal text-inform-head text-white leading-none">Enjoy daily
+                        <h3 class="font-dmsans font-normal text-inform-head text-white leading-none">Enjoy daily
                             passive
                             income</h3>
-                        <h4 class="font-sans font-normal text-lg leading-8 text-white">You earn daily interest with
+                        <h4 class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white">You earn daily
+                            interest with
                             Cashaa
                             giving you the power of compounding</h4>
                         <div>
                             <a href="#"
-                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                                 Earning Today</a>
                         </div>
                     </div>
@@ -425,14 +964,16 @@
                 </div>
                 <div class="grid grid-cols-2 items-center mt-10">
                     <div class="w-3/5 pr-10 space-y-6">
-                        <h3 class="font-sans font-normal text-inform-head text-white leading-none">Fixed interest rates
+                        <h3 class="font-dmsans font-normal text-inform-head text-white leading-none">Fixed interest
+                            rates
                         </h3>
-                        <h4 class="font-sans font-normal text-lg leading-8 text-white">You earn daily interest with
+                        <h4 class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white">You earn daily
+                            interest with
                             Cashaa
                             giving you the power of compounding</h4>
                         <div>
                             <a href="#"
-                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                                 Earning Today</a>
                         </div>
                     </div>
@@ -444,14 +985,15 @@
                 </div>
                 <div class="grid grid-cols-2 items-center mt-10">
                     <div class="w-3/5 pr-10 space-y-6">
-                        <h3 class="font-sans font-normal text-inform-head text-white leading-none">Earn more with CAS
+                        <h3 class="font-dmsans font-normal text-inform-head text-white leading-none">Earn more with CAS
                         </h3>
-                        <h4 class="font-sans font-normal text-lg leading-8 text-white">You earn daily interest with
+                        <h4 class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white">You earn daily
+                            interest with
                             Cashaa
                             giving you the power of compounding</h4>
                         <div>
                             <a href="#"
-                                class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                                 Earning Today</a>
                         </div>
                     </div>
@@ -474,287 +1016,339 @@
                 class="object-contain w-full h-full" width="100" height="100" loading="lazy">
         </div>
     </section>
-    <!-- You are 3 steps away from earning with Cashaa -->
-    <section class="bg-global relative py-10 md:py-16 xl:py-36">
-        <div class="px-4 mx-auto max-w-[1440px] relative z-50">
-            <h2 class="font-sans font-light text-main-head text-white leading-none text-center xl:w-1/2 mx-auto">
-                You are 3 steps away from earning with Cashaa</h2>
 
-            <!-- steps cards -->
-            <div class="grid grid-cols-3 gap-12 mt-12 relative">
-                <div
-                    class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8 relative">
-                    <div>
-                        <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
-                            class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
-                            loading="lazy">
+    <!-- wrap in a div because we use blob between section and footer  -->
+    <div class="overflow-hidden">
+        <!-- You are 3 steps away from earning with Cashaa -->
+        <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
+            <div class="px-4 mx-auto max-w-[1440px] relative z-50">
+                <h2
+                    class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center xl:w-1/2 mx-auto">
+                    You are 3 steps away from earning with Cashaa</h2>
+
+                <!-- steps cards -->
+                <div class="grid grid-cols-3 gap-12 mt-12 relative">
+                    <div
+                        class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8 relative">
+                        <div>
+                            <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
+                                class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
+                                loading="lazy">
+                        </div>
+                        <h3 class="font-dmsans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                            Sign
+                            up
+                            for a Cashaa
+                            account</h3>
                     </div>
-                    <h3 class="font-sans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">Sign up
-                        for a Cashaa
-                        account</h3>
+                    <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
+                        <div>
+                            <img src="assets/image/png&jpg/steps-cashaa-3.png" alt="steps-cashaa-3"
+                                class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
+                                loading="lazy">
+                        </div>
+                        <h3 class="font-dmsans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                            Purchase or transfer
+                            crypto to your account</h3>
+                    </div>
+                    <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
+                        <div>
+                            <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
+                                class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
+                                loading="lazy">
+                        </div>
+                        <h3 class="font-dmsans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                            Opt
+                            in
+                            for flexible
+                            income or start a fixed term deposit</h3>
+                    </div>
+
+                    <div class="absolute bottom-[-4px] left-0 right-[-4px]">
+                        <img src="assets/image/png&jpg/bottom-gr-card.png" alt="bottom-gr-card"
+                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                    </div>
                 </div>
-                <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
-                    <div>
-                        <img src="assets/image/png&jpg/steps-cashaa-3.png" alt="steps-cashaa-3"
-                            class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
-                            loading="lazy">
-                    </div>
-                    <h3 class="font-sans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
-                        Purchase or transfer
-                        crypto to your account</h3>
-                </div>
-                <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
-                    <div>
-                        <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
-                            class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
-                            loading="lazy">
-                    </div>
-                    <h3 class="font-sans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">Opt in
-                        for flexible
-                        income or start a fixed term deposit</h3>
+                <div class="text-center mt-5">
+                    <a href="#"
+                        class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                        earning</a>
                 </div>
 
-                <div class="absolute bottom-[-4px] left-0 right-[-4px]">
-                    <img src="assets/image/png&jpg/bottom-gr-card.png" alt="bottom-gr-card"
+                <div class="mt-28">
+                    <!-- Hey, this isn’t the end! See what’s next! -->
+                    <h2
+                        class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center xl:w-2/5 mx-auto">
+                        Hey, this isn’t the end! See what’s next!</h2>
+                    <div class="grid grid-cols-4 mt-10">
+                        <div
+                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            <p class="font-dmsans font-normal text-unstable text-white">I am curious to
+                                know how Cashaa provides such great returns!</p>
+
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                    class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                    loading="lazy">
+                                <p class="font-dmsans font-normal text-xl text-[#A6B0D5]">
+                                    Place mouse here</p>
+                            </div>
+
+                            <div
+                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                                <h4 class="font-dmsans font-normal text-rare text-white">Self-sustainable business model
+                                </h4>
+                                <p class="font-dmsans font-normal text-sm md:text-lg text-white">
+                                    Cashaa generates predictable and safe yields through a risk-free and simple model of
+                                    secured and sufficiently hedged institutional lending. No uncertainty of yield
+                                    farming,
+                                    token burning/minting, etc.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            <p class="font-dmsans font-normal text-unstable text-white">How do I earn the highest
+                                possible
+                                interest on Cashaa?</p>
+
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                    class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                    loading="lazy">
+                                <p class="font-dmsans font-normal text-xl text-[#A6B0D5]">
+                                    Place mouse here</p>
+                            </div>
+
+                            <div
+                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-8">
+                                <div class="space-y-3">
+                                    <h4 class="font-dmsans font-normal text-rare text-white">Become a Diamond Member
+                                    </h4>
+                                    <p class="font-dmsans font-normal text-sm md:text-lg text-white">
+                                        Become a Diamond by making sure you have 10% or more of your total portfolio
+                                        value
+                                        in
+                                        CAS token at all times.
+                                    </p>
+                                </div>
+                                <!-- if double information -->
+                                <div class="space-y-3">
+                                    <h4 class="font-dmsans font-normal text-rare text-white">Opt to earn interest in CAS
+                                    </h4>
+                                    <p class="font-dmsans font-normal text-sm md:text-lg text-white">
+                                        Earn up to 3% bonus on your yields by opting to take your interest  and payout
+                                        in
+                                        CAS.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            <p class="font-dmsans font-normal text-unstable text-white">How do I start earning interest
+                                on
+                                my
+                                available balance?</p>
+
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                    class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                    loading="lazy">
+                                <p class="font-dmsans font-normal text-xl text-[#A6B0D5]">
+                                    Place mouse here</p>
+                            </div>
+
+                            <div
+                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                                <h4 class="font-dmsans font-normal text-rare text-white">Opt-in for earning flex
+                                    interest
+                                </h4>
+                                <p class="font-dmsans font-normal text-sm md:text-lg text-white">
+                                    Once you have topped up your Cashaa account, do make sure to opt-in for earning flex
+                                    interest on your available balance to start earning interest.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            <p class="font-dmsans font-normal text-unstable text-white">Everything looks great! How do I
+                                get
+                                started?</p>
+
+                            <div class="flex items-center gap-3">
+                                <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
+                                    class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
+                                    loading="lazy">
+                                <p class="font-dmsans font-normal text-xl text-[#A6B0D5]">
+                                    Place mouse here</p>
+                            </div>
+
+                            <div
+                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                                <h4 class="font-dmsans font-normal text-rare text-white">Great!
+                                </h4>
+                                <p class="font-dmsans font-normal text-sm md:text-lg text-white">
+                                    You can start earning interest by clicking on the button below.
+                                </p>
+
+                                <div class="absolute bottom-0 left-0 right-0">
+                                    <a href="#Start earning"
+                                        class="bg-global px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border-2 border-global inline-block w-full text-center">Start
+                                        earning</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- right side background blob -->
+            <div class="absolute z-30 top-1/2 right-0 translate-x-[65%] -translate-y-1/2">
+                <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+            </div>
+            <!-- left side background blob -->
+            <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-[25%]">
+                <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer aria-label="Website Footer">
+            <div class="bg-global hid den relative">
+                <div class="relative z-50">
+                    <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa"
+                        class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                </div>
+                <div class="px-4 mx-auto max-w-[1440px] relative z-50 py-12">
+                    <h2
+                        class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
+                        To join the Cashaa revolution <br> leave your email address below</h2>
+                    <p
+                        class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white xl:w-1/2 mx-auto text-center mt-8">
+                        All
+                        or part of the services, some features
+                        thereof, or some Digital Assets, are not available in certain jurisdictions, including where
+                        restrictions or limitations may apply, as indicated in the relevant general terms and
+                        conditions.
+                    </p>
+                    <div class="w-5/12 mx-auto mt-8">
+                        <div class="flex items-center pt-4 gap-x-6">
+                            <form action="" class="flex-1 relative">
+                                <input type="email" required
+                                    class="bg-blurry p-6 pl-16 w-full font-dmsans font-medium text-highlighter capitalize placeholder:text-highlighter placeholder:text-sm md:text-lg placeholder:font-medium placeholder:font-dmsans focus:outline-0"
+                                    placeholder="Email Address">
+
+                                <span class="absolute top-1/2 left-0 translate-x-[20px] -translate-y-1/2">
+                                    <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M25.1829 0.553711H1.18286C0.917645 0.553711 0.663291 0.659068 0.475754 0.846604C0.288218 1.03414 0.182861 1.28849 0.182861 1.55371V18.5537C0.182861 19.0841 0.393575 19.5929 0.768648 19.9679C1.14372 20.343 1.65243 20.5537 2.18286 20.5537H24.1829C24.7133 20.5537 25.222 20.343 25.5971 19.9679C25.9721 19.5929 26.1829 19.0841 26.1829 18.5537V1.55371C26.1829 1.28849 26.0775 1.03414 25.89 0.846604C25.7024 0.659068 25.4481 0.553711 25.1829 0.553711ZM24.1829 18.5537H2.18286V3.82746L12.5066 13.2912C12.6911 13.4606 12.9324 13.5545 13.1829 13.5545C13.4333 13.5545 13.6746 13.4606 13.8591 13.2912L24.1829 3.82746V18.5537Z"
+                                            fill="#3F6FF9" />
+                                    </svg>
+                                </span>
+                                <span class="absolute top-1/2 right-0 translate-x-[-10px] -translate-y-1/2">
+                                    <button
+                                        class="bg-clickable px-10 py-3 text-sm md:text-lg font-medium text-white hover:bg-transparent duration-200 border border-clickable">Send
+                                    </button>
+                                </span>
+                            </form>
+                            <a href="#" class="text-sm font-semibold leading-6 text-white">
+                                <img src="assets/image/svg/Apple.svg" alt="Apple" class="w-full h-full max-w-[24px]"
+                                    width="100" height="100" loading="lazy">
+                            </a>
+                            <a href="#" class="text-sm font-semibold leading-6 text-white">
+                                <img src="assets/image/svg/Playstore.svg" alt="Playstore"
+                                    class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
+                            </a>
+                        </div>
+
+                        <div class="w-fit mx-auto mt-16">
+                            <a href="/">
+                                <span class="sr-only">Your Company</span>
+                                <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
+                                    class="w-full h-full object-contain max-w-[172px]" width="100" height="100"
+                                    loading="lazy">
+                            </a>
+                        </div>
+                        <hr class="my-10 border-gray-800">
+
+                        <div class="flex items-center gap-2.5 mx-auto w-fit">
+                            <div
+                                class="border-2 border-white/10 p-2.5 bg-blurry rounded-full w-10 h-10 flex items-center justify-center">
+                                <img src="assets/image/png&jpg/social-linkedin.png" alt="social-linkedin"
+                                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            </div>
+                            <div
+                                class="border-2 border-white/10 p-2.5 bg-blurry rounded-full w-10 h-10 flex items-center justify-center">
+                                <img src="assets/image/png&jpg/social-facebook.png" alt="social-facebook.png"
+                                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            </div>
+                            <div
+                                class="border-2 border-white/10 p-2.5 bg-blurry rounded-full w-10 h-10 flex items-center justify-center">
+                                <img src="assets/image/png&jpg/social-xx.png" alt="social-xx.png"
+                                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            </div>
+                            <div
+                                class="border-2 border-white/10 p-2.5 bg-blurry rounded-full w-10 h-10 flex items-center justify-center">
+                                <img src="assets/image/png&jpg/social-insta.png" alt="social-insta.png"
+                                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            </div>
+                            <div
+                                class="border-2 border-white/10 p-2.5 bg-blurry rounded-full w-10 h-10 flex items-center justify-center">
+                                <img src="assets/image/png&jpg/social-telegram.png" alt="social-telegram.png"
+                                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-5 mx-auto w-fit my-6">
+                            <span class="border-r-2 last:border-r-0 pr-5">
+                                <a href="#"
+                                    class="font-dmsans font-normal text-sm md:text-lg leading-none text-white border-b">
+                                    AML
+                                </a>
+                            </span>
+                            <span class="border-r-2 last:border-r-0 pr-5">
+                                <a href="#"
+                                    class="font-dmsans font-normal text-sm md:text-lg leading-none text-white border-b">
+                                    Terms and Conditions
+                                </a>
+                            </span>
+                            <span class="border-r-2 last:border-r-0 pr-5">
+                                <a href="#"
+                                    class="font-dmsans font-normal text-sm md:text-lg leading-none text-white border-b">
+                                    Privacy Policy
+                                </a>
+                            </span>
+                        </div>
+                        <p class="font-dmsans font-normal text-sm leading-none text-white text-center">Copyright 2016-
+                            2024
+                            Cashaa. All
+                            rights reserved.</p>
+                    </div>
+                </div>
+
+                <!-- right side background blob -->
+                <div class="absolute z-30 top-1/2 right-0 translate-x-[65%] -translate-y-1/2">
+                    <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
+                        class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                </div>
+                <!-- left side background blob -->
+                <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-[25%]">
+                    <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
+                        class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                </div>
+                <!-- bottom label image of cashaa -->
+                <div class="absolute z-0 top-0 left-0 -translate-y-2/3">
+                    <img src="assets/image/png&jpg/bottom-left-blov.png" alt="label-cashaa"
                         class="object-contain w-full h-full" width="100" height="100" loading="lazy">
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="#"
-                    class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
-                    earning</a>
-            </div>
+        </footer>
+    </div>
 
-            <div class="mt-28">
-                <!-- Hey, this isn’t the end! See what’s next! -->
-                <h2 class="font-sans font-light text-main-head text-white leading-none text-center xl:w-2/5 mx-auto">
-                    Hey, this isn’t the end! See what’s next!</h2>
-                <div class="grid grid-cols-4 mt-10">
-                    <div
-                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
-                        <p class="font-sans font-normal text-unstable text-white">I am curious to
-                            know how Cashaa provides such great returns!</p>
-
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
-                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
-                                loading="lazy">
-                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
-                                Place mouse here</p>
-                        </div>
-
-                        <div
-                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
-                            <h4 class="font-sans font-normal text-rare text-white">Self-sustainable business model
-                            </h4>
-                            <p class="font-sans font-normal text-lg text-white">
-                                Cashaa generates predictable and safe yields through a risk-free and simple model of
-                                secured and sufficiently hedged institutional lending. No uncertainty of yield farming,
-                                token burning/minting, etc.
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
-                        <p class="font-sans font-normal text-unstable text-white">How do I earn the highest possible
-                            interest on Cashaa?</p>
-
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
-                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
-                                loading="lazy">
-                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
-                                Place mouse here</p>
-                        </div>
-
-                        <div
-                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-8">
-                            <div class="space-y-3">
-                                <h4 class="font-sans font-normal text-rare text-white">Become a Diamond Member
-                                </h4>
-                                <p class="font-sans font-normal text-lg text-white">
-                                    Become a Diamond by making sure you have 10% or more of your total portfolio value
-                                    in
-                                    CAS token at all times.
-                                </p>
-                            </div>
-                            <!-- if double information -->
-                            <div class="space-y-3">
-                                <h4 class="font-sans font-normal text-rare text-white">Opt to earn interest in CAS
-                                </h4>
-                                <p class="font-sans font-normal text-lg text-white">
-                                    Earn up to 3% bonus on your yields by opting to take your interest  and payout in
-                                    CAS.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
-                        <p class="font-sans font-normal text-unstable text-white">How do I start earning interest on my
-                            available balance?</p>
-
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
-                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
-                                loading="lazy">
-                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
-                                Place mouse here</p>
-                        </div>
-
-                        <div
-                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
-                            <h4 class="font-sans font-normal text-rare text-white">Opt-in for earning flex interest
-                            </h4>
-                            <p class="font-sans font-normal text-lg text-white">
-                                Once you have topped up your Cashaa account, do make sure to opt-in for earning flex
-                                interest on your available balance to start earning interest.
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-[#1d2232] min-h-[510px] h-full flex flex-col justify-between items-center relative group">
-                        <p class="font-sans font-normal text-unstable text-white">Everything looks great! How do I get
-                            started?</p>
-
-                        <div class="flex items-center gap-3">
-                            <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
-                                class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
-                                loading="lazy">
-                            <p class="font-sans font-normal text-xl text-[#A6B0D5]">
-                                Place mouse here</p>
-                        </div>
-
-                        <div
-                            class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
-                            <h4 class="font-sans font-normal text-rare text-white">Great!
-                            </h4>
-                            <p class="font-sans font-normal text-lg text-white">
-                                You can start earning interest by clicking on the button below.
-                            </p>
-
-                            <div class="absolute bottom-0 left-0 right-0">
-                                <a href="#Start earning"
-                                    class="bg-global px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border-2 border-global inline-block w-full text-center">Start
-                                    earning</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- right side background blob -->
-        <div class="absolute z-30 top-1/2 right-0 translate-x-[65%] -translate-y-1/2">
-            <img src="assets/image/svg/right-bg-illusion.svg" alt="right-bg-illusion"
-                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-        </div>
-        <!-- left side background blob -->
-        <div class="absolute z-30 top-1/2 left-0 -translate-x-[72%] -translate-y-[25%]">
-            <img src="assets/image/svg/left-bg-illusion.svg" alt="right-bg-illusion"
-                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer aria-label="Website Footer">
-        <div class="bg-global relative">
-            <div class="relative z-50">
-                <img src="assets/image/png&jpg/label-cashaa.png" alt="label-cashaa" class="object-contain w-full h-full"
-                    width="100" height="100" loading="lazy">
-            </div>
-            <div class="px-4 mx-auto max-w-[1440px] relative z-50 py-12">
-                <h2 class="font-sans font-light text-main-head text-white leading-none text-center">
-                    To join the Cashaa revolution <br> leave your email address below</h2>
-                <p class="font-sans font-normal text-lg leading-8 text-white xl:w-1/2 mx-auto text-center mt-8">All
-                    or part of the services, some features
-                    thereof, or some Digital Assets, are not available in certain jurisdictions, including where
-                    restrictions or limitations may apply, as indicated in the relevant general terms and
-                    conditions.
-                </p>
-                <div class="w-3/4 mx-auto">
-                    <div class="flex items-center pt-4 gap-x-6 hidden">
-                        <a href="#"
-                            class="bg-clickable px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable">Start
-                            Earning Today</a>
-                        <a href="#" class="text-sm font-semibold leading-6 text-white">
-                            <img src="assets/image/svg/Apple.svg" alt="Apple" class="w-full h-full max-w-[24px]"
-                                width="100" height="100" loading="lazy">
-                        </a>
-                        <a href="#" class="text-sm font-semibold leading-6 text-white">
-                            <img src="assets/image/svg/Playstore.svg" alt="Playstore" class="w-full h-full max-w-[24px]"
-                                width="100" height="100" loading="lazy">
-                        </a>
-                    </div>
-
-                    <div class="w-fit mx-auto mt-16">
-                        <a href="/">
-                            <span class="sr-only">Your Company</span>
-                            <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
-                                class="w-full h-full object-contain max-w-[172px]" width="100" height="100"
-                                loading="lazy">
-                        </a>
-                    </div>
-                    <hr class="my-10">
-
-                    <div class="flex items-center gap-2.5 mx-auto w-fit">
-                        <div
-                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
-                            <img src="assets/image/png&jpg/social-linkedin.png" alt="social-linkedin"
-                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-                        </div>
-                        <div
-                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
-                            <img src="assets/image/png&jpg/social-facebook.png" alt="social-facebook.png"
-                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-                        </div>
-                        <div
-                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
-                            <img src="assets/image/png&jpg/social-xx.png" alt="social-xx.png"
-                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-                        </div>
-                        <div
-                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
-                            <img src="assets/image/png&jpg/social-insta.png" alt="social-insta.png"
-                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-                        </div>
-                        <div
-                            class="border-2 border-white/10 p-2.5 bg-[#1d2232] rounded-full w-10 h-10 flex items-center justify-center">
-                            <img src="assets/image/png&jpg/social-telegram.png" alt="social-telegram.png"
-                                class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-5 mx-auto w-fit my-6">
-                        <span class="border-r-2 last:border-r-0 pr-5">
-                            <a href="#" class="font-sans font-normal text-lg leading-none text-white border-b">
-                                AML
-                            </a>
-                        </span>
-                        <span class="border-r-2 last:border-r-0 pr-5">
-                            <a href="#" class="font-sans font-normal text-lg leading-none text-white border-b">
-                                Terms and Conditions
-                            </a>
-                        </span>
-                        <span class="border-r-2 last:border-r-0 pr-5">
-                            <a href="#" class="font-sans font-normal text-lg leading-none text-white border-b">
-                                Privacy Policy
-                            </a>
-                        </span>
-                    </div>
-                    <p class="font-sans font-normal text-sm leading-none text-white text-center">Copyright 2016- 2024
-                        Cashaa. All
-                        rights reserved.</p>
-                </div>
-            </div>
-
-            <!-- bottom label image of cashaa -->
-            <div class="absolute z-0 top-0 left-0 -translate-y-2/3">
-                <img src="assets/image/png&jpg/bottom-left-blov.png" alt="label-cashaa"
-                    class="object-contain w-full h-full" width="100" height="100" loading="lazy">
-            </div>
-        </div>
-    </footer>
     <script src="assets/js/main.js"></script>
 </body>
 
