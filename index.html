@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="bg-global hid den">
+    <div class="bg-global hidden">
         <header class="fixed top-0 left-0 right-0 z-[999999] bg-header">
             <nav class="flex items-center justify-between px-4 mx-auto max-w-[1440px] relative z-50 py-6 md:py-9"
                 aria-label="Global">
@@ -143,7 +143,7 @@
     </div>
 
     <!-- Awards winning company -->
-    <section class="bg-global hid den py-10 md:pt-16 xl:pt-36">
+    <section class="bg-global hidden py-10 md:pt-16 xl:pt-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
             <h2
                 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none md:max-w-[60%] lg:max-w-[40%] text-center mx-auto">
@@ -225,7 +225,7 @@
     </section>
 
     <!-- Earn more and Beat Inflation -->
-    <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
+    <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
             <div class="md:w-11/12 xl:w-3/5 mx-auto">
                 <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
@@ -276,7 +276,7 @@
     </section>
 
     <!-- marquee section (Current yield on assets) -->
-    <div class="bg-global hid den relative">
+    <div class="bg-global hidden relative">
         <div class="px-4">
             <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
                 Current yield on assets</h2>
@@ -365,7 +365,7 @@
     </div>
 
     <!-- Earn Calculator -->
-    <section class="bg-global hid den py-10 md:py-16 xl:py-36">
+    <section class="bg-global hidden py-10 md:py-16 xl:py-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
             <div class="w-3/5 mx-auto">
                 <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
@@ -374,11 +374,6 @@
                     a Token,
                     Amount, Loyalty Tier and Term to calculate your yields</p>
             </div>
-            <style>
-                .tab-content {
-                    display: none;
-                }
-            </style>
             <div class="mt-12">
                 <input type="checkbox" class="hidden" id="checkbox1">
                 <input type="checkbox" class="hidden" id="checkbox2" checked>
@@ -932,7 +927,7 @@
     </section>
 
     <!-- Why Earn with Cashaa? -->
-    <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
+    <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
         <div class="px-4 mx-auto max-w-[1440px] relative z-50">
             <h2 class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
                 Why Earn with Cashaa?</h2>
@@ -940,67 +935,82 @@
                 secure and
                 fixed passive income to put your idle assets to work</p>
 
-            <div class="space-y-6">
-                <div class="grid grid-cols-2 items-center mt-10">
-                    <div class="w-3/5 pr-10 space-y-6">
+            <div class="space-y-16 lg:space-y-6">
+                <div class="grid lg:grid-cols-2 gap-5 items-center mt-10">
+                    <div class="laptop:w-3/5 space-y-6 max-laptop:text-center">
                         <h3 class="font-dmsans font-normal text-inform-head text-white leading-none">Enjoy daily
                             passive
                             income</h3>
-                        <h4 class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white">You earn daily
+                        <h4 class="font-dmsans font-normal text-lg text-white">You earn daily
                             interest with
                             Cashaa
                             giving you the power of compounding</h4>
-                        <div>
+                        <div class="max-lg:hidden">
                             <a href="#"
                                 class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                                 Earning Today</a>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="space-y-8">
                         <img src="assets/image/png&jpg/blogs-content-images.png" alt="blogs-content-images"
-                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            class="object-contain w-full h-full max-h-[400px]" width="100" height="100" loading="lazy">
+                        <div class="text-center lg:hidden">
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                Earning Today</a>
+                        </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 items-center mt-10">
-                    <div class="w-3/5 pr-10 space-y-6">
+                <div class="grid lg:grid-cols-2 gap-5 items-center mt-10">
+                    <div class="laptop:w-3/5 space-y-6 max-laptop:text-center">
                         <h3 class="font-dmsans font-normal text-inform-head text-white leading-none">Fixed interest
                             rates
                         </h3>
-                        <h4 class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white">You earn daily
+                        <h4 class="font-dmsans font-normal text-lg text-white">You earn daily
                             interest with
                             Cashaa
                             giving you the power of compounding</h4>
-                        <div>
+                        <div class="max-lg:hidden">
                             <a href="#"
                                 class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                                 Earning Today</a>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="space-y-8">
                         <img src="assets/image/png&jpg/blogs-content-images.png" alt="blogs-content-images"
-                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            class="object-contain w-full h-full max-h-[400px]" width="100" height="100" loading="lazy">
+                        <div class="text-center lg:hidden">
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                Earning Today</a>
+                        </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 items-center mt-10">
-                    <div class="w-3/5 pr-10 space-y-6">
+                <div class="grid lg:grid-cols-2 gap-5 items-center mt-10">
+                    <div class="laptop:w-3/5 space-y-6 max-laptop:text-center">
                         <h3 class="font-dmsans font-normal text-inform-head text-white leading-none">Earn more with CAS
                         </h3>
-                        <h4 class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white">You earn daily
+                        <h4 class="font-dmsans font-normal text-lg text-white">You earn daily
                             interest with
                             Cashaa
                             giving you the power of compounding</h4>
-                        <div>
+                        <div class="max-lg:hidden">
                             <a href="#"
                                 class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                                 Earning Today</a>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="space-y-8">
                         <img src="assets/image/png&jpg/blogs-content-images.png" alt="blogs-content-images"
-                            class="object-contain w-full h-full" width="100" height="100" loading="lazy">
+                            class="object-contain w-full h-full max-h-[400px]" width="100" height="100" loading="lazy">
+                        <div class="text-center lg:hidden">
+                            <a href="#"
+                                class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                                Earning Today</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1020,44 +1030,49 @@
     <!-- wrap in a div because we use blob between section and footer  -->
     <div class="overflow-hidden">
         <!-- You are 3 steps away from earning with Cashaa -->
-        <section class="bg-global hid den relative py-10 md:py-16 xl:py-36">
+        <section class="bg-global hidden relative py-10 md:py-16 xl:py-36">
             <div class="px-4 mx-auto max-w-[1440px] relative z-50">
                 <h2
                     class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center xl:w-1/2 mx-auto">
                     You are 3 steps away from earning with Cashaa</h2>
 
                 <!-- steps cards -->
-                <div class="grid grid-cols-3 gap-12 mt-12 relative">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 xl:gap-12 mt-12 relative hidden">
                     <div
-                        class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8 relative">
+                        class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-4 md:space-y-8  relative">
                         <div>
                             <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
-                                class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
-                                loading="lazy">
+                                class="object-contain md:object-cover object-top w-full h-full max-h-[220px] md:max-h-[310px]"
+                                width="100" height="100" loading="lazy">
                         </div>
-                        <h3 class="font-dmsans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                        <h3
+                            class="font-dmsans font-normal text-xl text-white w-4/5 md:w-3/5 mx-auto text-center relative z-50">
                             Sign
                             up
                             for a Cashaa
                             account</h3>
                     </div>
-                    <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
+                    <div
+                        class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-4 md:space-y-8 ">
                         <div>
                             <img src="assets/image/png&jpg/steps-cashaa-3.png" alt="steps-cashaa-3"
-                                class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
-                                loading="lazy">
+                                class="object-contain md:object-cover object-top w-full h-full max-h-[220px] md:max-h-[310px]"
+                                width="100" height="100" loading="lazy">
                         </div>
-                        <h3 class="font-dmsans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                        <h3
+                            class="font-dmsans font-normal text-xl text-white w-4/5 md:w-3/5 mx-auto text-center relative z-50">
                             Purchase or transfer
                             crypto to your account</h3>
                     </div>
-                    <div class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-8">
+                    <div
+                        class="p-5 bg-[url(assets/image/png&jpg/bg-blob-steps.png)] bg-no-repeat bg-fully space-y-4 md:space-y-8 md:max-lg:col-span-2 max-w-[340px] mx-auto">
                         <div>
                             <img src="assets/image/png&jpg/steps-cashaa-1.png" alt="steps-cashaa-1"
-                                class="object-cover object-top w-full h-full max-h-[310px]" width="100" height="100"
-                                loading="lazy">
+                                class="object-contain md:object-cover object-top w-full h-full max-h-[220px] md:max-h-[310px]"
+                                width="100" height="100" loading="lazy">
                         </div>
-                        <h3 class="font-dmsans font-normal text-xl text-white w-3/5 mx-auto text-center relative z-50">
+                        <h3
+                            class="font-dmsans font-normal text-xl text-white w-4/5 md:w-3/5 mx-auto text-center relative z-50">
                             Opt
                             in
                             for flexible
@@ -1069,9 +1084,9 @@
                             class="object-contain w-full h-full" width="100" height="100" loading="lazy">
                     </div>
                 </div>
-                <div class="text-center mt-5">
+                <div class="text-center mt-5 hidden">
                     <a href="#"
-                        class="bg-clickable px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
+                        class="bg-clickable px-12 xl:px-10 py-4 text-lg font-bold text-white hover:bg-transparent duration-200 border border-clickable inline-block">Start
                         earning</a>
                 </div>
 
@@ -1080,13 +1095,13 @@
                     <h2
                         class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center xl:w-2/5 mx-auto">
                         Hey, this isn’t the end! See what’s next!</h2>
-                    <div class="grid grid-cols-4 mt-10">
+                    <div class="grid md:grid-cols-2 xl:grid-cols-4 mt-10 border-2 border-white/10">
                         <div
-                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            class="p-10 border-b-2 xl:border-b-0 border-white/10 p-8 md:p-10 bg-blurry md:min-h-[510px] h-full flex flex-col justify-between items-center relative group max-md:space-y-6">
                             <p class="font-dmsans font-normal text-unstable text-white">I am curious to
                                 know how Cashaa provides such great returns!</p>
 
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-3 max-md:hidden">
                                 <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
                                     class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
                                     loading="lazy">
@@ -1095,7 +1110,7 @@
                             </div>
 
                             <div
-                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                                class="realtive md:absolute top-0 bottom-0 left-0 right-0 bg-clickable p-4 md:p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 max-md:hidden group-hover:block duration-200 space-y-3">
                                 <h4 class="font-dmsans font-normal text-rare text-white">Self-sustainable business model
                                 </h4>
                                 <p class="font-dmsans font-normal text-sm md:text-lg text-white">
@@ -1107,12 +1122,12 @@
                             </div>
                         </div>
                         <div
-                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            class="p-10 max-lg:border-b-2 md:border-l-2 md:max-xl:border-b-2 border-white/10 p-8 md:p-10 bg-blurry md:min-h-[510px] h-full flex flex-col justify-between items-center relative group max-md:space-y-6">
                             <p class="font-dmsans font-normal text-unstable text-white">How do I earn the highest
                                 possible
                                 interest on Cashaa?</p>
 
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-3 max-md:hidden">
                                 <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
                                     class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
                                     loading="lazy">
@@ -1121,7 +1136,7 @@
                             </div>
 
                             <div
-                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-8">
+                                class="realtive md:absolute top-0 bottom-0 left-0 right-0 bg-clickable p-4 md:p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 max-md:hidden group-hover:block duration-200 space-y-8">
                                 <div class="space-y-3">
                                     <h4 class="font-dmsans font-normal text-rare text-white">Become a Diamond Member
                                     </h4>
@@ -1145,13 +1160,13 @@
                             </div>
                         </div>
                         <div
-                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            class="p-10 max-md:border-b-2 xl:border-l-2 border-white/10 p-8 md:p-10 bg-blurry md:min-h-[510px] h-full flex flex-col justify-between items-center relative group max-md:space-y-6">
                             <p class="font-dmsans font-normal text-unstable text-white">How do I start earning interest
                                 on
                                 my
                                 available balance?</p>
 
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-3 max-md:hidden">
                                 <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
                                     class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
                                     loading="lazy">
@@ -1160,7 +1175,7 @@
                             </div>
 
                             <div
-                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                                class="realtive md:absolute top-0 bottom-0 left-0 right-0 bg-clickable p-4 md:p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 max-md:hidden group-hover:block duration-200 space-y-3">
                                 <h4 class="font-dmsans font-normal text-rare text-white">Opt-in for earning flex
                                     interest
                                 </h4>
@@ -1171,12 +1186,12 @@
                             </div>
                         </div>
                         <div
-                            class="p-10 border-2 last:border-r-2 border-r-0 border-white/10 p-10 bg-blurry min-h-[510px] h-full flex flex-col justify-between items-center relative group">
+                            class="p-10 md:border-l-2 border-white/10 p-8 md:p-10 bg-blurry md:min-h-[510px] h-full flex flex-col justify-between items-center relative group max-md:space-y-6">
                             <p class="font-dmsans font-normal text-unstable text-white">Everything looks great! How do I
                                 get
                                 started?</p>
 
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-3 max-md:hidden">
                                 <img src="assets/image/png&jpg/animated-mouse.png" alt="animated-mouse"
                                     class="object-contain w-full h-full max-w-[20px]" width="100" height="100"
                                     loading="lazy">
@@ -1185,14 +1200,14 @@
                             </div>
 
                             <div
-                                class="absolute top-0 bottom-0 left-0 right-0 bg-clickable p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-200 space-y-3">
+                                class="realtive md:absolute top-0 bottom-0 left-0 right-0 bg-clickable p-4 md:p-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 max-md:hidden group-hover:block duration-200 space-y-3">
                                 <h4 class="font-dmsans font-normal text-rare text-white">Great!
                                 </h4>
                                 <p class="font-dmsans font-normal text-sm md:text-lg text-white">
                                     You can start earning interest by clicking on the button below.
                                 </p>
 
-                                <div class="absolute bottom-0 left-0 right-0">
+                                <div class="md:absolute bottom-0 left-0 right-0">
                                     <a href="#Start earning"
                                         class="bg-global px-10 py-4 text-sm md:text-lg font-bold text-white hover:bg-transparent duration-200 border-2 border-global inline-block w-full text-center">Start
                                         earning</a>
@@ -1227,18 +1242,18 @@
                         class="font-dmsans font-extralight text-5xl md:text-main-head text-white leading-none text-center">
                         To join the Cashaa revolution <br> leave your email address below</h2>
                     <p
-                        class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white xl:w-1/2 mx-auto text-center mt-8">
+                        class="font-dmsans font-normal text-sm md:text-lg leading-8 text-white xl:w-1/2 mx-auto text-center mt-6 md:mt-8">
                         All
                         or part of the services, some features
                         thereof, or some Digital Assets, are not available in certain jurisdictions, including where
                         restrictions or limitations may apply, as indicated in the relevant general terms and
                         conditions.
                     </p>
-                    <div class="w-5/12 mx-auto mt-8">
+                    <div class="md:w-9/12 xl:w-5/12 mx-auto mt-5 md:mt-8">
                         <div class="flex items-center pt-4 gap-x-6">
                             <form action="" class="flex-1 relative">
                                 <input type="email" required
-                                    class="bg-blurry p-6 pl-16 w-full font-dmsans font-medium text-highlighter capitalize placeholder:text-highlighter placeholder:text-sm md:text-lg placeholder:font-medium placeholder:font-dmsans focus:outline-0"
+                                    class="bg-blurry max-md:py-3 p-6 pl-16 pr-24 md:pr-36 w-full font-dmsans font-medium text-highlighter capitalize placeholder:text-highlighter placeholder:text-sm md:text-lg placeholder:font-medium placeholder:font-dmsans focus:outline-0"
                                     placeholder="Email Address">
 
                                 <span class="absolute top-1/2 left-0 translate-x-[20px] -translate-y-1/2">
@@ -1251,21 +1266,21 @@
                                 </span>
                                 <span class="absolute top-1/2 right-0 translate-x-[-10px] -translate-y-1/2">
                                     <button
-                                        class="bg-clickable px-10 py-3 text-sm md:text-lg font-medium text-white hover:bg-transparent duration-200 border border-clickable">Send
+                                        class="bg-clickable px-4 md:px-10 py-1 md:py-3 text-lg font-medium text-white hover:bg-transparent duration-200 border border-clickable">Send
                                     </button>
                                 </span>
                             </form>
-                            <a href="#" class="text-sm font-semibold leading-6 text-white">
+                            <a href="#" class="max-md:hidden">
                                 <img src="assets/image/svg/Apple.svg" alt="Apple" class="w-full h-full max-w-[24px]"
                                     width="100" height="100" loading="lazy">
                             </a>
-                            <a href="#" class="text-sm font-semibold leading-6 text-white">
+                            <a href="#" class="max-md:hidden">
                                 <img src="assets/image/svg/Playstore.svg" alt="Playstore"
                                     class="w-full h-full max-w-[24px]" width="100" height="100" loading="lazy">
                             </a>
                         </div>
 
-                        <div class="w-fit mx-auto mt-16">
+                        <div class="w-fit mx-auto mt-12 md:mt-16">
                             <a href="/">
                                 <span class="sr-only">Your Company</span>
                                 <img src="assets/image/svg/cashaa-logo.svg" alt="cashaa-logo"
@@ -1304,19 +1319,19 @@
                         </div>
 
                         <div class="flex items-center gap-5 mx-auto w-fit my-6">
-                            <span class="border-r-2 last:border-r-0 pr-5">
+                            <span class="border-r-2 last:border-r-0 pr-5 last:pr-0">
                                 <a href="#"
                                     class="font-dmsans font-normal text-sm md:text-lg leading-none text-white border-b">
                                     AML
                                 </a>
                             </span>
-                            <span class="border-r-2 last:border-r-0 pr-5">
+                            <span class="border-r-2 last:border-r-0 pr-5 last:pr-0">
                                 <a href="#"
                                     class="font-dmsans font-normal text-sm md:text-lg leading-none text-white border-b">
                                     Terms and Conditions
                                 </a>
                             </span>
-                            <span class="border-r-2 last:border-r-0 pr-5">
+                            <span class="border-r-2 last:border-r-0 pr-5 last:pr-0">
                                 <a href="#"
                                     class="font-dmsans font-normal text-sm md:text-lg leading-none text-white border-b">
                                     Privacy Policy
