@@ -21,6 +21,9 @@ tailwind.config = {
       backgroundSize: {
         fully: "100% 100%",
       },
+      screens: {
+        laptop: "1400px",
+      },
     },
   },
 };
